@@ -8,7 +8,8 @@ public class Character : MonoBehaviour
     public VectorFieldController vectorFieldController;
 
     // Max amount of side-to-side force to apply for floating appearance
-    public float sideForceNeg, sideForcePos;
+    public float sideForceNeg = -5f;
+    public float sideForcePos = 5f;
 
     void Start()
     {

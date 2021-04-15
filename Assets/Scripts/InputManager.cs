@@ -9,7 +9,7 @@ using UnityEngine.InputSystem;
 public class InputManager : MonoBehaviour
 {
     public static InputManager instance;
-    public InputActions controls;
+    public InputAction controls;
 
     public GameObject mouseFollower;
     public Vector2 mousePos;
@@ -28,7 +28,7 @@ public class InputManager : MonoBehaviour
     void Awake()
     {
         instance = this;
-        controls = new InputActions();
+        controls = new InputAction();
 
     }
 

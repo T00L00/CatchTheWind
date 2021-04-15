@@ -24,7 +24,7 @@ public class Grid
     public Grid(float _cellDiameter, Vector2Int _gridSize)
     {
         cellDiameter = _cellDiameter;
-        cellRadius = cellDiameter/2;
+        cellRadius = cellDiameter/2f;
         gridSize = _gridSize;   
     }
 
