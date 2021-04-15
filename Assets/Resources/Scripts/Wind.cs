@@ -7,12 +7,11 @@ using UnityEngine.EventSystems;
 
 public class Wind : MonoBehaviour
 {
-    public GameObject windZone;
-
+    //Not Yet Fully Implemented
     public Vector2 startMousePos;
     public Vector2 currentMousePos;
     public Vector2 endMousePos;
-    public List<Vector2> windSpots = new List<Vector2>();
+
     int moveSpeed = 10;
 
     void OnTriggerEnter2D(Collider2D other)
@@ -31,10 +30,10 @@ public class Wind : MonoBehaviour
         other.attachedRigidbody.AddForce(new Vector3(direction.x * moveSpeed, direction.y * moveSpeed, 0));
 
     }
-    // void OnCollisionExit2D(Collider2D other)
-    // {
-    //     Debug.Log("Object left the trigger");
-    // }
+    void OnTriggerExit2D(Collider2D other)
+    {
+        Debug.Log("Object left the trigger");
+    }
 
     private void Update()
     {

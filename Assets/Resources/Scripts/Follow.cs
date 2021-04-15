@@ -2,6 +2,7 @@ using UnityEngine;
 using System.Collections;
 public class Follow : MonoBehaviour
 {
+
     public GameObject objectToFollow;
     private Vector3 offset;
     void Start()
