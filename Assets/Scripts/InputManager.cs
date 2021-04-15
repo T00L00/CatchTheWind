@@ -1,26 +1,41 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.InputSystem;
 
-public class MouseManager : MonoBehaviour
+/// <summary>
+/// This class keeps track of the mouse position and oher various inputs in the game
+/// </summary>
+public class InputManager : MonoBehaviour
 {
-    public static MouseManager instance;
+    public static InputManager instance;
+    public InputActions controls;
+
     public GameObject mouseFollower;
-    public float windRadius;
     public Vector2 mousePos;
     public Vector3 screenPos;
-    public Collider2D[] colliders;
+
+    private void OnEnable()
+    {
+        controls.Enable();
+    }
+    private void OnDisable()
+    {
+        controls.Disable();
+    }
 
     // Start is called before the first frame update
     void Awake()
     {
         instance = this;
+        controls = new InputActions();
+
     }
 
     // Update is called once per frame
     void Update()
     {
-        screenPos = Input.mousePosition;
+        screenPos = Mouse.current.position.ReadValue();
         screenPos.z = Camera.main.nearClipPlane;
         mousePos = Camera.main.ScreenToWorldPoint(screenPos);
 
