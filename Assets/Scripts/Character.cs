@@ -18,7 +18,7 @@ public class Character : MonoBehaviour
 
     void FixedUpdate()
     {
-        rigidBody.AddForce(GetSide2SideForce() + VectorField.WindCurrentForce(vectorFieldController.vectorField, rigidBody.transform.position));
+        rigidBody.AddForce(GetSide2SideForce() + VectorField.VectorAtPosition(vectorFieldController.vectorField, rigidBody.transform.position));
     }
 
     Vector2 GetSide2SideForce()

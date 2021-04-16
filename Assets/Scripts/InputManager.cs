@@ -9,7 +9,7 @@ using UnityEngine.InputSystem;
 public class InputManager : MonoBehaviour
 {
     public static InputManager instance;
-    public InputAction controls;
+//    public InputActions controls;
 
     public GameObject mouseFollower;
     public Vector2 mousePos;
@@ -17,18 +17,18 @@ public class InputManager : MonoBehaviour
 
     private void OnEnable()
     {
-        controls.Enable();
+ //       controls.Enable();
     }
     private void OnDisable()
     {
-        controls.Disable();
+//        controls.Disable();
     }
 
     // Start is called before the first frame update
     void Awake()
     {
         instance = this;
-        controls = new InputAction();
+ //       controls = new InputActions();
 
     }
 

@@ -8,7 +8,8 @@ using UnityEngine;
 public class DebugField : MonoBehaviour
 {
     public VectorFieldController controller;
-    public bool toggle = false;
+    public bool toggleOn = false;
+    public bool normalizeVectors = true;
 
     // Desired cell size
     public float spacing;
@@ -24,7 +25,7 @@ public class DebugField : MonoBehaviour
         Grid sceneGrid = new Grid(spacing, gridSize);
         sceneGrid.origin = origin;
         sceneGrid.CreateGrid();
-        if (toggle)
+        if (toggleOn)
         {
             Vector2 force;
             Vector2 pos;
@@ -33,8 +34,12 @@ public class DebugField : MonoBehaviour
                 for (int j = 0; j < sceneGrid.gridSize.y; j++)
                 {
                     pos = sceneGrid.grid[i, j].worldPos;
-                    force = VectorField.WindCurrentForce(controller.vectorField, pos);
-                    DrawArrow.ForGizmo(pos, force.normalized, Color.grey);
+                    force = VectorField.VectorAtPosition(controller.vectorField, pos);
+                    if (normalizeVectors)
+                    {
+                        force = force.normalized;
+                    }
+                    DrawArrow.ForGizmo(pos, force, Color.grey);
                 }
             }
             
