@@ -429,7 +429,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1251416351}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 12.92, y: 3.52, z: 0.7235701}
+  m_LocalPosition: {x: 6.74, y: 6.66, z: 0.7235701}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children:
   - {fileID: 1881453429}
@@ -653,23 +653,23 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   vectorField:
-    fieldType: 1
+    fieldType: 2
     xParams:
       coeff: 1
       xShift: 0
+      xExponent: 0
+      yShift: 1
+      yExponent: 2
+      tExponent: 1
+      constant: 2
+    yParams:
+      coeff: -1
+      xShift: 5
       xExponent: 1
       yShift: 0
       yExponent: 0
-      tExponent: 1
-      constant: 10
-    yParams:
-      coeff: -0.5
-      xShift: 0
-      xExponent: 0
-      yShift: 0
-      yExponent: 1
-      tExponent: 0.2
-      constant: -5
+      tExponent: 0
+      constant: -15
 --- !u!4 &1636214780
 Transform:
   m_ObjectHideFlags: 0
@@ -700,8 +700,8 @@ MonoBehaviour:
   toggleOn: 1
   normalizeVectors: 1
   spacing: 1
-  gridSize: {x: 20, y: 20}
-  origin: {x: 0, y: 0}
+  gridSize: {x: 40, y: 40}
+  origin: {x: -10, y: -10}
 --- !u!1 &1881453428
 GameObject:
   m_ObjectHideFlags: 0

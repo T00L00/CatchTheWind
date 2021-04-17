@@ -6,6 +6,7 @@ using UnityEngine;
 [System.Serializable]
 public enum FieldType
 {
+    Test,
     Linear,
     SinTLinear,
     SinXSinY,
@@ -42,6 +43,9 @@ public class VectorField
         Vector2 vector = new Vector2 { x = 0f, y = 0f };
         switch (vf.fieldType)
         {
+            case FieldType.Test:
+                vector = CalculateTest(vf, pos);
+                break;
             case FieldType.Linear:
                 vector = CalculateLinear(vf, pos);
                 break;
@@ -65,6 +69,19 @@ public class VectorField
     }
 
     #region Vector Field Functions
+
+    // Vector field for testing different functions
+    public static Vector2 CalculateTest(VectorField vf, Vector2 pos)
+    {
+        FieldParameters xp = vf.xParams;
+        FieldParameters yp = vf.yParams;
+        return new Vector2
+        {
+            x = xp.coeff * Mathf.Sin(Time.time) * Mathf.Pow(pos.x - xp.xShift, xp.xExponent) * Mathf.Pow(pos.y - xp.yShift, xp.yExponent) * Mathf.Pow(Time.time, xp.tExponent) + xp.constant * Mathf.Sin(Time.time),
+            y = yp.coeff * Mathf.Cos(Time.time) * Mathf.Pow(pos.x - yp.xShift, yp.xExponent) * Mathf.Pow(pos.y - yp.yShift, yp.yExponent) * Mathf.Pow(Time.time, yp.tExponent) + yp.constant * Mathf.Cos(Time.time)
+        };
+    }
+
     public static Vector2 CalculateLinear(VectorField vf, Vector2 pos)
     {
         FieldParameters xp = vf.xParams;
@@ -76,7 +93,6 @@ public class VectorField
         };
     }
 
-    // Sways back and forth
     public static Vector2 CalculateSinTLinear(VectorField vf, Vector2 pos)
     {
         FieldParameters xp = vf.xParams;
