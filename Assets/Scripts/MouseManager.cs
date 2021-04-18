@@ -4,7 +4,7 @@ using UnityEngine;
 using UnityEngine.InputSystem;
 
 /// <summary>
-/// This class keeps track of the mouse position and oher various inputs in the game
+/// This class keeps track of the mouse position and other various inputs in the game
 /// </summary>
 public class InputsManager : MonoBehaviour
 {
