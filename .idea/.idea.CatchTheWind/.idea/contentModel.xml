@@ -123,6 +123,8 @@
             <e p="GameLoader.cs" t="Include" />
             <e p="MenuController.cs" t="Include" />
             <e p="QuitGameScript.cs" t="Include" />
+            <e p="UIClickController.cs" t="Include" />
+            <e p="VolumeController.cs" t="Include" />
           </e>
         </e>
       </e>
