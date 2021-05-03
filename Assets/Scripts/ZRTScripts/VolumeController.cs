@@ -6,17 +6,18 @@ using UnityEngine.UI;
 
 public class VolumeController : MonoBehaviour
 {
+    [Space]
     [SerializeField] private AudioMixer mixerMaster;
+    
+    [Space]
     [SerializeField] private Slider sliderMaster;
     [SerializeField] private string volumeIdentifierMaster;
     
     [Space]
-    [SerializeField] private AudioMixer mixerMusic;
     [SerializeField] private Slider sliderMusic;
     [SerializeField] private string volumeIdentifierMusic;
     
-    [Space] 
-    [SerializeField] private AudioMixer mixerSFX;
+    [Space]
     [SerializeField] private Slider sliderSFX;
     [SerializeField] private string volumeIdentifierSFX;
     
