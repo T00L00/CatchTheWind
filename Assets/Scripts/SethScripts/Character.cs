@@ -18,9 +18,9 @@ public class Character : MonoBehaviour
         swipeDetector = GameObject.Find("SwipeManager").GetComponent<SwipeDetection>();
     }
 
-    void Start()
+    private void Update()
     {
-        swipeDetector.swipeForce = new Vector2 { x = 0, y = 0 };
+
     }
 
     void FixedUpdate()
@@ -28,13 +28,18 @@ public class Character : MonoBehaviour
         rigidBody.AddForce(GetSide2SideForce() 
             + VectorField.VectorAtPosition(vectorFieldController.vectorField, rigidBody.transform.position)
             + swipeDetector.swipeForce);
+
+        // Slowly decrease force over time
+        swipeDetector.swipeForce *= 0.99f;
     }
 
-    Vector2 GetSide2SideForce()
+    Vector3 GetSide2SideForce()
     {
-        return new Vector2
+        return new Vector3
         {
             x = Random.Range(sideForceNeg, sideForcePos)
         };
     }
+
+
 }

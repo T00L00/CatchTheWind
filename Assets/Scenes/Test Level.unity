@@ -5232,6 +5232,17 @@ SpriteRenderer:
   m_WasSpriteAssigned: 1
   m_MaskInteraction: 0
   m_SpriteSortPoint: 0
+--- !u!114 &731831344 stripped
+MonoBehaviour:
+  m_CorrespondingSourceObject: {fileID: 1012687494, guid: bff0d29096a2c8248a3c15405fb47e65, type: 3}
+  m_PrefabInstance: {fileID: 937328885784058928}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 69e2ebf7eca63c44b990a659835bd3ef, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!4 &743626831 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 8590850314628754667, guid: 241e375b9e4a70e4489683e6c0dff960, type: 3}
@@ -12282,8 +12293,10 @@ MonoBehaviour:
   minimumDistance: 0.2
   maximumTime: 1
   trail: {fileID: 1974984922}
-  forceMultiplier: 5
+  forceMultiplier: 20
   debugSwipe: 1
+  character: {fileID: 731831344}
+  swipeDampener: 1
 --- !u!114 &1760539150
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -14833,12 +14846,16 @@ PrefabInstance:
       value: 
       objectReference: {fileID: 481276780}
     - target: {fileID: 1012687494, guid: bff0d29096a2c8248a3c15405fb47e65, type: 3}
+      propertyPath: swipeDampener
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 1012687494, guid: bff0d29096a2c8248a3c15405fb47e65, type: 3}
       propertyPath: vectorFieldController
       value: 
       objectReference: {fileID: 1863161839}
     - target: {fileID: 937328884770088167, guid: bff0d29096a2c8248a3c15405fb47e65, type: 3}
       propertyPath: m_Name
-      value: Player
+      value: Character
       objectReference: {fileID: 0}
     - target: {fileID: 937328884770088170, guid: bff0d29096a2c8248a3c15405fb47e65, type: 3}
       propertyPath: m_RootOrder
@@ -15473,6 +15490,18 @@ PrefabInstance:
     - target: {fileID: 7588472777376075180, guid: 8ebdb9ea07259df468cf68769b8831da, type: 3}
       propertyPath: m_Name
       value: VectorFieldController
+      objectReference: {fileID: 0}
+    - target: {fileID: 7588472777376075182, guid: 8ebdb9ea07259df468cf68769b8831da, type: 3}
+      propertyPath: vectorField.xParams.coeff
+      value: 10
+      objectReference: {fileID: 0}
+    - target: {fileID: 7588472777376075183, guid: 8ebdb9ea07259df468cf68769b8831da, type: 3}
+      propertyPath: toggleOn
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 7588472777376075183, guid: 8ebdb9ea07259df468cf68769b8831da, type: 3}
+      propertyPath: normalizeVectors
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 7588472777376075185, guid: 8ebdb9ea07259df468cf68769b8831da, type: 3}
       propertyPath: m_RootOrder

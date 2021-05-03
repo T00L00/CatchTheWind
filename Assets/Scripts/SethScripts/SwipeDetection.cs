@@ -15,13 +15,16 @@ public class SwipeDetection : MonoBehaviour
     [SerializeField]
     private bool debugSwipe = false;
 
+    public Character character;
+    public float swipeDampener = 1f;
+
     private InputSwipeManager inputManager;
 
-    private Vector2 startPosition;
+    private Vector3 startPosition;
     private float startTime;
-    private Vector2 endPosition;
+    private Vector3 endPosition;
     private float endTime;
-    public Vector2 swipeForce
+    public Vector3 swipeForce
     {
         get; set;
     }
@@ -31,6 +34,11 @@ public class SwipeDetection : MonoBehaviour
     private void Awake()
     {
         inputManager = InputSwipeManager.Instance;
+    }
+
+    private void Start()
+    {
+        swipeForce = Vector3.zero;
     }
 
     private void OnEnable()
@@ -69,24 +77,34 @@ public class SwipeDetection : MonoBehaviour
         StopCoroutine(coroutine);
         endPosition = position;
         endTime = time;
-        swipeForce = forceMultiplier * DetectSwipe();
+        DetectSwipe();
     }
 
-    // Measure length and duration of swipe
-    private Vector2 DetectSwipe()
+    /// <summary>
+    /// Determine swipe force that is applied to character based on length of swipe and distance away from character
+    /// </summary>
+    /// <returns></returns>
+    private void DetectSwipe()
     {
         if (Vector3.Distance(startPosition, endPosition) >= minimumDistance && (endTime - startTime) <= maximumTime)
-        {
+        {            
+            Vector3 direction = endPosition - startPosition;        // Direction of force
+            Vector3 center = (endPosition + startPosition) * 0.5f;  // Center of force vector
+
+            // Scale the swipe force according to how far away the swipe was made from rigidbody
+            // Closer the swipe, stonger the force
+            float distanceFromRb = Vector3.Magnitude(character.rigidBody.transform.position - center);
+            swipeForce = direction * Mathf.Exp(-swipeDampener * distanceFromRb) * forceMultiplier;
+
             if (debugSwipe)
             {
                 Debug.Log("Swipe Detected");
                 Debug.DrawLine(startPosition, endPosition, Color.red, 5f);
-            }            
-            Vector3 direction = endPosition - startPosition;
-            return new Vector2 { x = direction.x, y = direction.y }; // resulting force vector that will push sapling
+            }
         }
-        return new Vector2 { x = 0, y = 0 };
     }
 
-
+    // Need to implement collider detector for swipe
+    // If collider detects swipe, apply unscaled force
+    // If collider doesn't detect swipe, apply scaled force
 }
