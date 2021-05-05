@@ -38,9 +38,9 @@ public class VectorField
     /// <param name="vectorField"></param>
     /// <param name="transform"></param>
     /// <returns>Force vector</returns>
-	public static Vector2 VectorAtPosition(VectorField vf, Vector2 pos)
+	public static Vector3 VectorAtPosition(VectorField vf, Vector3 pos)
     {
-        Vector2 vector = new Vector2 { x = 0f, y = 0f };
+        Vector3 vector = new Vector3 { x = 0f, y = 0f, z = 0f };
         switch (vf.fieldType)
         {
             case FieldType.Test:
@@ -71,77 +71,77 @@ public class VectorField
     #region Vector Field Functions
 
     // Vector field for testing different functions
-    public static Vector2 CalculateTest(VectorField vf, Vector2 pos)
+    public static Vector3 CalculateTest(VectorField vf, Vector3 pos)
     {
         FieldParameters xp = vf.xParams;
         FieldParameters yp = vf.yParams;
-        return new Vector2
+        return new Vector3
         {
             x = xp.coeff * Mathf.Sin(Time.time) * Mathf.Pow(pos.x - xp.xShift, xp.xExponent) * Mathf.Pow(pos.y - xp.yShift, xp.yExponent) * Mathf.Pow(Time.time, xp.tExponent) + xp.constant * Mathf.Sin(Time.time),
             y = yp.coeff * Mathf.Cos(Time.time) * Mathf.Pow(pos.x - yp.xShift, yp.xExponent) * Mathf.Pow(pos.y - yp.yShift, yp.yExponent) * Mathf.Pow(Time.time, yp.tExponent) + yp.constant * Mathf.Cos(Time.time)
         };
     }
 
-    public static Vector2 CalculateLinear(VectorField vf, Vector2 pos)
+    public static Vector3 CalculateLinear(VectorField vf, Vector3 pos)
     {
         FieldParameters xp = vf.xParams;
         FieldParameters yp = vf.yParams;
-        return new Vector2
+        return new Vector3
         {
             x = xp.coeff * Mathf.Pow(pos.x - xp.xShift, xp.xExponent) * Mathf.Pow(pos.y - xp.yShift, xp.yExponent) * Mathf.Pow(Time.time, xp.tExponent) + xp.constant,
             y = yp.coeff * Mathf.Pow(pos.x - yp.xShift, yp.xExponent) * Mathf.Pow(pos.y - yp.yShift, yp.yExponent) * Mathf.Pow(Time.time, yp.tExponent) + yp.constant
         };
     }
 
-    public static Vector2 CalculateSinTLinear(VectorField vf, Vector2 pos)
+    public static Vector3 CalculateSinTLinear(VectorField vf, Vector3 pos)
     {
         FieldParameters xp = vf.xParams;
         FieldParameters yp = vf.yParams;
-        return new Vector2
+        return new Vector3
         {
             x = xp.coeff * Mathf.Sin( Mathf.Pow(Time.time, xp.tExponent) ) * Mathf.Pow(pos.x - xp.xShift, xp.xExponent) * Mathf.Pow(pos.y - xp.yShift, xp.yExponent) + xp.constant,
             y = yp.coeff * Mathf.Sin( Mathf.Pow(Time.time, yp.tExponent) ) * Mathf.Pow(pos.x - yp.xShift, yp.xExponent) * Mathf.Pow(pos.y - yp.yShift, yp.yExponent) + yp.constant
         };
     }
 
-    public static Vector2 CalculateSinXSinY(VectorField vf, Vector2 pos)
+    public static Vector3 CalculateSinXSinY(VectorField vf, Vector3 pos)
     {
         FieldParameters xp = vf.xParams;
         FieldParameters yp = vf.yParams;
-        return new Vector2
+        return new Vector3
         {
             x = Mathf.Sin(xp.coeff * Mathf.Pow(pos.x - xp.xShift, xp.xExponent) * Mathf.Pow(pos.y - xp.yShift, xp.yExponent) * Mathf.Pow(Time.time, xp.tExponent)) + xp.constant,
             y = Mathf.Sin(yp.coeff * Mathf.Pow(pos.x - yp.xShift, yp.xExponent) * Mathf.Pow(pos.y - yp.yShift, yp.yExponent) * Mathf.Pow(Time.time, yp.tExponent)) + yp.constant
         };
     }
 
-    public static Vector2 CalculateSinXCosY(VectorField vf, Vector2 pos)
+    public static Vector3 CalculateSinXCosY(VectorField vf, Vector3 pos)
     {
         FieldParameters xp = vf.xParams;
         FieldParameters yp = vf.yParams;
-        return new Vector2
+        return new Vector3
         {
             x = Mathf.Sin(xp.coeff * Mathf.Pow(pos.x - xp.xShift, xp.xExponent) * Mathf.Pow(pos.y - xp.yShift, xp.yExponent) * Mathf.Pow(Time.time, xp.tExponent)) + xp.constant,
             y = Mathf.Cos(yp.coeff * Mathf.Pow(pos.x - yp.xShift, yp.xExponent) * Mathf.Pow(pos.y - yp.yShift, yp.yExponent) * Mathf.Pow(Time.time, yp.tExponent)) + yp.constant
         };
     }
 
-    public static Vector2 CalculateCosXSinY(VectorField vf, Vector2 pos)
+    public static Vector3 CalculateCosXSinY(VectorField vf, Vector3 pos)
     {
         FieldParameters xp = vf.xParams;
         FieldParameters yp = vf.yParams;
-        return new Vector2
+        return new Vector3
         {
             x = Mathf.Cos(xp.coeff * Mathf.Pow(pos.x - xp.xShift, xp.xExponent) * Mathf.Pow(pos.y - xp.yShift, xp.yExponent) * Mathf.Pow(Time.time, xp.tExponent)) + xp.constant,
             y = Mathf.Sin(yp.coeff * Mathf.Pow(pos.x - yp.xShift, yp.xExponent) * Mathf.Pow(pos.y - yp.yShift, yp.yExponent) * Mathf.Pow(Time.time, yp.tExponent)) + yp.constant
         };
     }
 
-    public static Vector2 CalculateCosXCosY(VectorField vf, Vector2 pos)
+    public static Vector3 CalculateCosXCosY(VectorField vf, Vector3 pos)
     {
         FieldParameters xp = vf.xParams;
         FieldParameters yp = vf.yParams;
-        return new Vector2
+        return new Vector3
         {
             x = Mathf.Cos(xp.coeff * Mathf.Pow(pos.x - xp.xShift, xp.xExponent) * Mathf.Pow(pos.y - xp.yShift, xp.yExponent) * Mathf.Pow(Time.time, xp.tExponent)) + xp.constant,
             y = Mathf.Cos(yp.coeff * Mathf.Pow(pos.x - yp.xShift, yp.xExponent) * Mathf.Pow(pos.y - yp.yShift, yp.yExponent) * Mathf.Pow(Time.time, yp.tExponent)) + yp.constant
