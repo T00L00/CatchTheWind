@@ -2,9 +2,13 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="1d4c0877-9490-4b6d-978e-705edf434726" name="Default Changelist" comment="">
+      <change beforePath="$PROJECT_DIR$/.idea/.idea.CatchTheWind/.idea/contentModel.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.CatchTheWind/.idea/contentModel.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/.idea.CatchTheWind/.idea/indexLayout.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.CatchTheWind/.idea/indexLayout.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/.idea.CatchTheWind/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.CatchTheWind/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scripts/ZRTScripts/VolumeController.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/ZRTScripts/VolumeController.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scenes/Menu.unity" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scenes/Menu.unity" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scripts/ZRTScripts/MenuController.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/ZRTScripts/MenuController.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Timelines/MenuTimeline.playable" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Timelines/MenuTimeline.playable.meta" beforeDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -15,23 +19,32 @@
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
   </component>
   <component name="HighlightingSettingsPerFile">
+    <setting file="file://$PROJECT_DIR$/Assets/Scripts/ZRTScripts/AudioManager.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Assets/Scripts/ZRTScripts/UIClickController.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Assets/Scripts/ZRTScripts/VolumeController.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/../Platformer/Assets/Scripts/Music.cs" root0="SKIP_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Assets/Scripts/ZRTScripts/Singleton.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Assets/Scripts/ZRTScripts/GameLoader.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/../Platformer/Assets/Scripts/ScoreSystem.cs" root0="SKIP_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Assets/Scripts/ZRTScripts/MenuController.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Library/PackageCache/com.unity.inputsystem@1.0.2/InputSystem/Utilities/DelegateHelpers.cs" root0="SKIP_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Assets/Scripts/ZRTScripts/UIPanelController.cs" root0="FORCE_HIGHLIGHTING" />
   </component>
   <component name="IdeDocumentHistory">
     <changedPaths>
       <option value="$PROJECT_DIR$/Assets/Scripts/ZRTScripts/MenuInputManager.cs" />
       <option value="$PROJECT_DIR$/Assets/Scripts/ZRTScripts/GameLoader.cs" />
       <option value="$PROJECT_DIR$/Assets/Scripts/ZRTScripts/QuitGame.cs" />
-      <option value="$PROJECT_DIR$/Assets/Scripts/ZRTScripts/MenuController.cs" />
       <option value="$PROJECT_DIR$/Assets/Scripts/ZRTScripts/MenuVolumeController2.cs" />
       <option value="$PROJECT_DIR$/Assets/Scripts/ZRTScripts/MenuVolumeController.cs" />
       <option value="$PROJECT_DIR$/Assets/Scripts/ZRTScripts/MenuVolumeController1.cs" />
       <option value="$PROJECT_DIR$/Assets/Scripts/ZRTScripts/UIClickController.cs" />
       <option value="$PROJECT_DIR$/Assets/Scripts/ZRTScripts/VolumeController.cs" />
+      <option value="$PROJECT_DIR$/Assets/Scripts/ZRTScripts/UIPanelController.cs" />
+      <option value="$PROJECT_DIR$/Assets/Scripts/ZRTScripts/DontDestroyOnLoad.cs" />
+      <option value="$PROJECT_DIR$/Assets/Scripts/ZRTScripts/Singleton.cs" />
+      <option value="$PROJECT_DIR$/Assets/Scripts/ZRTScripts/MenuController.cs" />
+      <option value="$PROJECT_DIR$/Assets/Scripts/ZRTScripts/AudioManager.cs" />
     </changedPaths>
   </component>
   <component name="ProjectId" id="1rV2nPjJKuY4TQlpM23A02IPEcu" />
@@ -94,6 +107,7 @@
       <workItem from="1619047571271" duration="5553000" />
       <workItem from="1619134827933" duration="2423000" />
       <workItem from="1619310345605" duration="876000" />
+      <workItem from="1620169568990" duration="4245000" />
     </task>
     <servers />
   </component>

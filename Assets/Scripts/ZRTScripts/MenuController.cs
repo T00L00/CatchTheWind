@@ -15,10 +15,10 @@ public class MenuController : MonoBehaviour
     [SerializeField] int clickedTimer;
     
     private InputActions inputActions;
-    
 
     private void Awake()
     {
+        
         inputActions = new InputActions();
         DeactivePanel();
     }
@@ -44,7 +44,6 @@ public class MenuController : MonoBehaviour
     private void OpenMenu()
     {
         StartCoroutine(AnimatorHandler());
-        StartCoroutine(ActivatePanel());
         Debug.Log("Doing menu animations!");
         
     }
@@ -56,9 +55,8 @@ public class MenuController : MonoBehaviour
         menuPanel.blocksRaycasts = false;
     }
 
-    private IEnumerator ActivatePanel()
+    private void ActivatePanel()
     {
-        yield return new WaitForSeconds(clickedTimer);
         menuPanel.alpha = 1;
         menuPanel.interactable = true;
         menuPanel.blocksRaycasts = true;
@@ -69,5 +67,6 @@ public class MenuController : MonoBehaviour
         startGameTextAnimator.SetTrigger("FadeText");
         yield return new WaitForSeconds(clickedTimer);
         startGameText.SetActive(false);
+        ActivatePanel();
     }
 }
