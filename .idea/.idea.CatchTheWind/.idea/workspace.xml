@@ -6,9 +6,6 @@
       <change beforePath="$PROJECT_DIR$/.idea/.idea.CatchTheWind/.idea/indexLayout.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.CatchTheWind/.idea/indexLayout.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/.idea.CatchTheWind/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.CatchTheWind/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Assets/Scenes/Menu.unity" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scenes/Menu.unity" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scripts/ZRTScripts/MenuController.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/ZRTScripts/MenuController.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Timelines/MenuTimeline.playable" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Timelines/MenuTimeline.playable.meta" beforeDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -108,6 +105,7 @@
       <workItem from="1619134827933" duration="2423000" />
       <workItem from="1619310345605" duration="876000" />
       <workItem from="1620169568990" duration="4245000" />
+      <workItem from="1620257753143" duration="557000" />
     </task>
     <servers />
   </component>
