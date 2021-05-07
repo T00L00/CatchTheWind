@@ -8,11 +8,6 @@
       <e p="Assets" t="Include">
         <e p="InputActions.cs" t="Include" />
         <e p="Packages" t="Include">
-          <e p="BayatGames" t="Include">
-            <e p="Free Platform Game Assets" t="Include">
-              <e p="Readme.txt" t="Include" />
-            </e>
-          </e>
           <e p="TextMesh Pro" t="Include">
             <e p="Examples &amp; Extras" t="Include">
               <e p="Fonts" t="Include">
@@ -116,14 +111,21 @@
             <e p="DrawArrow.cs" t="Include" />
             <e p="FieldParameters.cs" t="Include" />
             <e p="Grid.cs" t="Include" />
+            <e p="InputSwipeManager.cs" t="Include" />
+            <e p="Singleton.cs" t="Include" />
+            <e p="SwipeDetection.cs" t="Include" />
+            <e p="Utils.cs" t="Include" />
             <e p="VectorField.cs" t="Include" />
             <e p="VectorFieldController.cs" t="Include" />
           </e>
           <e p="ZRTScripts" t="Include">
+            <e p="AudioManager.cs" t="Include" />
             <e p="GameLoader.cs" t="Include" />
             <e p="MenuController.cs" t="Include" />
             <e p="QuitGameScript.cs" t="Include" />
+            <e p="Singleton.cs" t="Include" />
             <e p="UIClickController.cs" t="Include" />
+            <e p="UIPanelController.cs" t="Include" />
             <e p="VolumeController.cs" t="Include" />
           </e>
         </e>
