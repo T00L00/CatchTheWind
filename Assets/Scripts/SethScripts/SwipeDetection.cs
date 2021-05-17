@@ -15,7 +15,7 @@ public class SwipeDetection : MonoBehaviour
     [SerializeField]
     private bool debugSwipe = false;
 
-    public Character character;
+    public Sapling character;
     public float swipeDampener = 1f;
 
     private InputSwipeManager inputManager;

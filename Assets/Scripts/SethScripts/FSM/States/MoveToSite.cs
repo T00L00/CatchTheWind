@@ -2,11 +2,32 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
-public class MoveToSite : IState
+internal class MoveToSite : IState
 {
-    public void OnEnter() { }
+    private readonly Sapling _sapling;
+    private float speed = 10.0f;
 
-    public void OnExit() { }
+    public MoveToSite(Sapling sapling)
+    {
+        _sapling = sapling;
+    }
 
-    public void Tick() { }
+    public void Tick()
+    {
+        float step = speed * Time.deltaTime;
+        _sapling.transform.position = Vector2.MoveTowards(_sapling.transform.position, _sapling.nearestTreeSpot.transform.position, step);
+    }
+
+    public void OnEnter() 
+    {
+        Debug.Log("State: MoveToSite");
+        
+    }
+
+    public void OnExit() 
+    {
+        speed = 0f;
+    }
+
+
 }

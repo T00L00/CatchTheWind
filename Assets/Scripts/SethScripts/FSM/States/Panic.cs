@@ -4,9 +4,14 @@ using UnityEngine;
 
 public class Panic : IState
 {
-    public void OnEnter() { }
+    public void Tick() { }
+
+    public void OnEnter() 
+    {
+        Debug.Log("State: Panic");
+    }
 
     public void OnExit() { }
 
-    public void Tick() { }
+
 }
