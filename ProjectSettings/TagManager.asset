@@ -45,11 +45,11 @@ TagManager:
   - name: Background
     uniqueID: 664791211
     locked: 0
-  - name: Ground
-    uniqueID: 2165430933
-    locked: 0
   - name: Obstacle
     uniqueID: 329182835
+    locked: 0
+  - name: Ground
+    uniqueID: 2165430933
     locked: 0
   - name: Player
     uniqueID: 2248142949
