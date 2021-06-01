@@ -1,0 +1,29 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: e09f12a9b8fb5e44eb81fa499afbecc4, type: 3}
+  m_Name: FindPlantSpot
+  m_EditorClassIdentifier: 
+  onFixed: []
+  onUpdate:
+  - {fileID: 11400000, guid: 5b50883920a5e604ba50f449e5200703, type: 2}
+  onEnter: []
+  onExit: []
+  idCount: 4
+  transitions:
+  - id: 0
+    condition: {fileID: 11400000, guid: dc8d7566ebbee8040a7849b925d6cd66, type: 2}
+    targetState: {fileID: 11400000, guid: e90cb5e47febc934b9c9609abd783c6f, type: 2}
+    disable: 0
+  - id: 1
+    condition: {fileID: 11400000, guid: c896bb1eab43284439f12d13c840e610, type: 2}
+    targetState: {fileID: 11400000, guid: 5828f0568cdc13c4e88204a9b01ab9f3, type: 2}
+    disable: 0
