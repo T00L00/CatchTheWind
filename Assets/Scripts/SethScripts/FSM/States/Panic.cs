@@ -4,6 +4,12 @@ using UnityEngine;
 
 public class Panic : IState
 {
+    private readonly Sapling _sapling;
+
+    public Panic(Sapling s)
+    {
+        _sapling = s;
+    }
     public void Tick() { }
 
     public void OnEnter() 

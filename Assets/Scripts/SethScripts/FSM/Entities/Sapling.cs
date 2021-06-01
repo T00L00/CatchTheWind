@@ -8,9 +8,10 @@ public class Sapling : MonoBehaviour
     public Rigidbody2D rigidBody;
     public VectorFieldController vectorFieldController;
     public SwipeDetection swipeDetector;
-    public TreeSpotManager treeSpotManager;
-    private BoxCollider2D boxCollider2d;
-    [SerializeField] private LayerMask platformLayerMask;
+    public LayerMask platformLayerMask;
+    public LayerMask treeSiteLayerMask;
+    public Animator animator { get; set; }
+    private CapsuleCollider2D capsuleCollider;
 
     // Max amount of side-to-side force to apply for floating appearance
     public float sideForceNeg = -5f;
@@ -19,33 +20,39 @@ public class Sapling : MonoBehaviour
     // State machine variables
     private StateMachine _stateMachine;
     public GameObject nearestTreeSpot { get; set; }
+    public bool foundTreeSite { get; set; }
+    public bool isGrounded { get; set; }
+    public Vector3 groundMovementForce { get; set; }
+    public int facing { get; set; } // 1 for right, -1 for left
+    public bool enemyNear { get; set; }
 
     private void Awake()
     {
         rigidBody = GetComponent<Rigidbody2D>();
         swipeDetector = GameObject.Find("SwipeManager").GetComponent<SwipeDetection>();
-        treeSpotManager = TreeSpotManager.Instance;
-        boxCollider2d = GetComponent<BoxCollider2D>();
+        capsuleCollider = GetComponent<CapsuleCollider2D>();
+        animator = GetComponent<Animator>();
 
         _stateMachine = new StateMachine();
 
         // Create all possible states available to sapling
-        var floating = new Floating();
+        var floating = new Floating(this);
         var search = new SearchForSiteToPlant(this);
         var moveToSite = new MoveToSite(this);
         var plantTree = new PlantTree();
-        var panic = new Panic();
-        var wander = new Wander();
+        var panic = new Panic(this);
+        var wander = new Wander(this);
 
         // Define transitions
         At(floating, search, Landed());
         At(search, moveToSite, HasTarget());
+        At(search, panic, EnemyNear());
         At(moveToSite, plantTree, ReachedTarget());
         At(plantTree, search, TreePlanted());
+
         At(search, floating, NoLongerGrounded());
         At(moveToSite, floating, NoLongerGrounded());
         At(plantTree, floating, NoLongerGrounded());
-        // At(search, wander, HasNoTarget());
 
         _stateMachine.SetState(floating);
 
@@ -55,8 +62,17 @@ public class Sapling : MonoBehaviour
         Func<bool> NoLongerGrounded() => () => IsGrounded() == false;
         Func<bool> HasTarget() => () => (IsGrounded() == true) && (nearestTreeSpot != null);
         Func<bool> HasNoTarget() => () => (IsGrounded() == true) && (nearestTreeSpot = null);
-        Func<bool> ReachedTarget() => () => (IsGrounded() == true) && (nearestTreeSpot != null) && (Vector2.Distance(transform.position, nearestTreeSpot.transform.position) < 1f);
-        Func<bool> TreePlanted() => () => (IsGrounded() == true) && (nearestTreeSpot != null) && (treeSpotManager.GetTreeSpotStatus(nearestTreeSpot) == true);
+        Func<bool> ReachedTarget() => () => (IsGrounded() == true) && (nearestTreeSpot != null) && (Vector2.Distance(transform.position, nearestTreeSpot.transform.position) < 2f);
+        Func<bool> TreePlanted() => () => (IsGrounded() == true) && (nearestTreeSpot != null);
+        Func<bool> EnemyNear() => () => (enemyNear == true) && (IsGrounded());
+    }
+
+    private void Start()
+    {
+        foundTreeSite = false;
+        groundMovementForce = Vector3.zero;
+        facing = 1;
+        enemyNear = false;
     }
 
     private void Update()
@@ -64,15 +80,28 @@ public class Sapling : MonoBehaviour
         _stateMachine.Tick();
     }
 
-    void FixedUpdate()
+    private void FixedUpdate()
     {
-        rigidBody.AddForce(GetSide2SideForce()
-            + VectorField.VectorAtPosition(vectorFieldController.vectorField, rigidBody.transform.position)
-            + swipeDetector.swipeForce);
+        //  Apply all forces acting on sapling
+        rigidBody.AddForce(
+        VectorField.VectorAtPosition(vectorFieldController.vectorField, rigidBody.transform.position)
+        + swipeDetector.swipeForce
+        + groundMovementForce);
 
-        // Slowly decrease force over time
+        // Slowly decrease swipe force over time
         swipeDetector.swipeForce *= 0.99f;
     }
+
+    private void OnTriggerEnter2D(Collider2D collider)
+    {
+        if (collider.gameObject.tag == "PlatformEndPoint")
+        {
+            Flip();
+            groundMovementForce *= -1; 
+        }
+    }
+
+    #region Functions
 
     Vector3 GetSide2SideForce()
     {
@@ -84,8 +113,8 @@ public class Sapling : MonoBehaviour
 
     private bool IsGrounded()
     {
-        float extraHeightText = 1f;
-        RaycastHit2D raycastHit = Physics2D.BoxCast(boxCollider2d.bounds.center, boxCollider2d.bounds.size, 0f, Vector2.down, extraHeightText, platformLayerMask);
+        float extraHeightText = 0.1f;
+        RaycastHit2D raycastHit = Physics2D.BoxCast(capsuleCollider.bounds.center, capsuleCollider.bounds.size, 0f, Vector2.down, extraHeightText, platformLayerMask);
 
         //Color rayColor;
         //if (raycastHit.collider != null)
@@ -101,8 +130,36 @@ public class Sapling : MonoBehaviour
         //Debug.DrawRay(boxCollider2d.bounds.center - new Vector3(boxCollider2d.bounds.extents.x, boxCollider2d.bounds.extents.y + extraHeightText), Vector2.right * (boxCollider2d.bounds.extents.x * 2f), rayColor);
 
         //Debug.Log(raycastHit.collider);
-        return raycastHit.collider != null;
-        
+
+        isGrounded = raycastHit.collider != null;
+        return isGrounded;
     } 
-    
+
+    public void FoundTreeSite()
+    {
+        float distanceToCast = 3f;
+        Vector3 direction = Vector3.right;
+        if (facing == -1) { direction = Vector3.left; }
+
+        RaycastHit2D raycastHitForward = Physics2D.BoxCast(capsuleCollider.bounds.center, capsuleCollider.bounds.size, 0f, direction, distanceToCast, treeSiteLayerMask);
+        // RaycastHit2D raycastHitBackward = Physics2D.BoxCast(capsuleCollider.bounds.center, capsuleCollider.bounds.size, 0f, Vector2.left, distanceToCast, treeSiteLayerMask);
+        Debug.DrawRay(capsuleCollider.bounds.center, direction * distanceToCast, Color.red);
+        if (raycastHitForward.collider?.gameObject.tag == "TreeSpot")
+        {
+            foundTreeSite = true;
+            nearestTreeSpot = raycastHitForward.collider.gameObject;
+            Debug.Log("TreeSpot found!");
+        }
+    }
+
+    //Flip the player so it looks to the direction where it's going
+    void Flip()
+    {
+        Vector3 theScale = transform.localScale;
+        theScale.x *= -1;
+        transform.localScale = theScale;
+        facing *= -1;
+    }
+
+    #endregion
 }

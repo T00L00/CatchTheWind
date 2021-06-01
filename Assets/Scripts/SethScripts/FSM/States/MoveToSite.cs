@@ -5,7 +5,7 @@ using UnityEngine;
 internal class MoveToSite : IState
 {
     private readonly Sapling _sapling;
-    private float speed = 10.0f;
+    private float speed = 5.0f;
 
     public MoveToSite(Sapling sapling)
     {

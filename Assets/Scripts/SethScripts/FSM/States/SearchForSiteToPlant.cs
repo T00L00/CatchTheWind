@@ -5,6 +5,7 @@ using UnityEngine;
 public class SearchForSiteToPlant : IState
 {
     private readonly Sapling _sapling;
+    private float speed = 2f;
 
     public SearchForSiteToPlant(Sapling sapling)
     {
@@ -13,24 +14,15 @@ public class SearchForSiteToPlant : IState
 
     public void Tick() 
     {
-        
+        _sapling.FoundTreeSite();
     }
 
     public void OnEnter() 
     {
-        float previousDistance = Mathf.Infinity;
-        GameObject nearestTreeSpot = null;
-        foreach (GameObject treeSpot in TreeSpotManager.Instance.treeSpots.Keys)
-        {
-            float distance = Vector2.Distance(_sapling.transform.position, treeSpot.transform.position);
-            if ( distance < previousDistance)
-            {
-                nearestTreeSpot = treeSpot;
-                previousDistance = distance;
-            }
-        }
-        _sapling.nearestTreeSpot = nearestTreeSpot;
-        Debug.Log($"State: SearchForSiteToPlant | {_sapling.nearestTreeSpot?.name}");
+        _sapling.groundMovementForce = _sapling.facing * new Vector3(15, 0);
+        _sapling.animator.SetBool("isGrounded", true);
+        _sapling.animator.SetFloat("groundMovementForce", Mathf.Abs(_sapling.groundMovementForce.x));
+        Debug.Log($"State: Searching for site to plant");
     }
 
     public void OnExit() { }

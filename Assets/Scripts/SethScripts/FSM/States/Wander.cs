@@ -2,11 +2,26 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
-public class Wander : MonoBehaviour
+public class Wander : IState
 {
-    public void OnEnter() { }
+    private readonly Sapling _sapling;
+
+    public Wander(Sapling s)
+    {
+        _sapling = s;
+    }
+
+    public void Tick() 
+    {
+        
+    }
+
+    public void OnEnter() 
+    {
+        _sapling.animator.SetBool("isGrounded", true);
+        Debug.Log("State: Wandering");
+    }
 
     public void OnExit() { }
 
-    public void Tick() { }
 }
