@@ -20,12 +20,15 @@ public class SearchForSiteToPlant : IState
     public void OnEnter() 
     {
         _sapling.groundMovementForce = _sapling.facing * new Vector3(15, 0);
-        _sapling.animator.SetBool("isGrounded", true);
+        _sapling.animator.SetBool("isGrounded", _sapling.isGrounded);
         _sapling.animator.SetFloat("groundMovementForce", Mathf.Abs(_sapling.groundMovementForce.x));
         Debug.Log($"State: Searching for site to plant");
     }
 
-    public void OnExit() { }
+    public void OnExit() 
+    {
+        _sapling.groundMovementForce = Vector3.zero;
+    }
 
 
 

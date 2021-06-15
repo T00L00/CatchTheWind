@@ -19,12 +19,13 @@ public class Sapling : MonoBehaviour
 
     // State machine variables
     private StateMachine _stateMachine;
-    public GameObject nearestTreeSpot { get; set; }
+    public TreeSpot nearestTreeSpot { get; set; }
     public bool foundTreeSite { get; set; }
     public bool isGrounded { get; set; }
     public Vector3 groundMovementForce { get; set; }
     public int facing { get; set; } // 1 for right, -1 for left
     public bool enemyNear { get; set; }
+    public bool atTreeSpot { get; set; }
 
     private void Awake()
     {
@@ -39,7 +40,7 @@ public class Sapling : MonoBehaviour
         var floating = new Floating(this);
         var search = new SearchForSiteToPlant(this);
         var moveToSite = new MoveToSite(this);
-        var plantTree = new PlantTree();
+        var plantTree = new PlantTree(this);
         var panic = new Panic(this);
         var wander = new Wander(this);
 
@@ -47,7 +48,7 @@ public class Sapling : MonoBehaviour
         At(floating, search, Landed());
         At(search, moveToSite, HasTarget());
         At(search, panic, EnemyNear());
-        At(moveToSite, plantTree, ReachedTarget());
+        At(moveToSite, plantTree, HasReachedTarget());
         At(plantTree, search, TreePlanted());
 
         At(search, floating, NoLongerGrounded());
@@ -61,10 +62,10 @@ public class Sapling : MonoBehaviour
         Func<bool> Landed() => () => IsGrounded() == true;
         Func<bool> NoLongerGrounded() => () => IsGrounded() == false;
         Func<bool> HasTarget() => () => (IsGrounded() == true) && (nearestTreeSpot != null);
-        Func<bool> HasNoTarget() => () => (IsGrounded() == true) && (nearestTreeSpot = null);
-        Func<bool> ReachedTarget() => () => (IsGrounded() == true) && (nearestTreeSpot != null) && (Vector2.Distance(transform.position, nearestTreeSpot.transform.position) < 2f);
-        Func<bool> TreePlanted() => () => (IsGrounded() == true) && (nearestTreeSpot != null);
-        Func<bool> EnemyNear() => () => (enemyNear == true) && (IsGrounded());
+        Func<bool> HasNoTarget() => () => (IsGrounded() == true) && (nearestTreeSpot == null);
+        Func<bool> HasReachedTarget() => () => (IsGrounded() == true) && (nearestTreeSpot != null) && AtTreeSpot();
+        Func<bool> TreePlanted() => () => (IsGrounded() == true) && (nearestTreeSpot.planted == true); // something needs to trigger planted change to true
+        Func<bool> EnemyNear() => () => (enemyNear == true) && (IsGrounded() == true);
     }
 
     private void Start()
@@ -73,6 +74,7 @@ public class Sapling : MonoBehaviour
         groundMovementForce = Vector3.zero;
         facing = 1;
         enemyNear = false;
+        atTreeSpot = false;
     }
 
     private void Update()
@@ -82,7 +84,7 @@ public class Sapling : MonoBehaviour
 
     private void FixedUpdate()
     {
-        //  Apply all forces acting on sapling
+        // Apply all forces acting on sapling
         rigidBody.AddForce(
         VectorField.VectorAtPosition(vectorFieldController.vectorField, rigidBody.transform.position)
         + swipeDetector.swipeForce
@@ -97,12 +99,16 @@ public class Sapling : MonoBehaviour
         if (collider.gameObject.tag == "PlatformEndPoint")
         {
             Flip();
-            groundMovementForce *= -1; 
+            groundMovementForce *= -1;
         }
     }
 
     #region Functions
 
+    /// <summary>
+    /// Generate random side to side forces to mimic floating
+    /// </summary>
+    /// <returns></returns>
     Vector3 GetSide2SideForce()
     {
         return new Vector3
@@ -111,9 +117,13 @@ public class Sapling : MonoBehaviour
         };
     }
 
+    /// <summary>
+    /// Apply a boxcast downward to check for ground
+    /// </summary>
+    /// <returns></returns>
     private bool IsGrounded()
     {
-        float extraHeightText = 0.1f;
+        float extraHeightText = 0.5f;
         RaycastHit2D raycastHit = Physics2D.BoxCast(capsuleCollider.bounds.center, capsuleCollider.bounds.size, 0f, Vector2.down, extraHeightText, platformLayerMask);
 
         //Color rayColor;
@@ -135,21 +145,43 @@ public class Sapling : MonoBehaviour
         return isGrounded;
     } 
 
+    /// <summary>
+    /// Apply a boxcast in the direction of facing to check for tree spot
+    /// </summary>
     public void FoundTreeSite()
     {
-        float distanceToCast = 3f;
+        // Make sure to search direction is same as facing direction
         Vector3 direction = Vector3.right;
         if (facing == -1) { direction = Vector3.left; }
 
+        // Do a BoxCast that will only return something if a tree spot is found
+        float distanceToCast = 3f;
         RaycastHit2D raycastHitForward = Physics2D.BoxCast(capsuleCollider.bounds.center, capsuleCollider.bounds.size, 0f, direction, distanceToCast, treeSiteLayerMask);
-        // RaycastHit2D raycastHitBackward = Physics2D.BoxCast(capsuleCollider.bounds.center, capsuleCollider.bounds.size, 0f, Vector2.left, distanceToCast, treeSiteLayerMask);
         Debug.DrawRay(capsuleCollider.bounds.center, direction * distanceToCast, Color.red);
-        if (raycastHitForward.collider?.gameObject.tag == "TreeSpot")
+
+        nearestTreeSpot = raycastHitForward.collider?.gameObject.GetComponent<TreeSpot>();
+        if (nearestTreeSpot?.planted == false)
         {
             foundTreeSite = true;
-            nearestTreeSpot = raycastHitForward.collider.gameObject;
-            Debug.Log("TreeSpot found!");
+            Debug.Log("Open tree spot found!");
+            return;
         }
+        
+        // If tree spot has already been planted, do nothing
+        if (nearestTreeSpot?.planted == true)
+        {
+            foundTreeSite = false;
+            nearestTreeSpot = null;
+            Debug.Log("Tree spot already planted.");
+            return;
+        }
+
+    }
+
+    public bool AtTreeSpot()
+    {
+        atTreeSpot = Vector2.Distance(transform.position, nearestTreeSpot.transform.position) < 0.5f;
+        return atTreeSpot;
     }
 
     //Flip the player so it looks to the direction where it's going
@@ -159,6 +191,11 @@ public class Sapling : MonoBehaviour
         theScale.x *= -1;
         transform.localScale = theScale;
         facing *= -1;
+    }
+
+    public void GrowTree()
+    {
+        nearestTreeSpot?.animator.SetBool("finishedPlanting", true);
     }
 
     #endregion

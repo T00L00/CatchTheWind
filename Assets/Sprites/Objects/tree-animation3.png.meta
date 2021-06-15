@@ -1,0 +1,1656 @@
+fileFormatVersion: 2
+guid: cef3ff501e28f6b45a22909d104d087d
+TextureImporter:
+  internalIDToNameTable:
+  - first:
+      213: 6070457986636922732
+    second: tree-animation3_0
+  - first:
+      213: 6622947384220061182
+    second: tree-animation3_1
+  - first:
+      213: -6893750547433814166
+    second: tree-animation3_2
+  - first:
+      213: 7109065566540930839
+    second: tree-animation3_3
+  - first:
+      213: 4519361366890392131
+    second: tree-animation3_4
+  - first:
+      213: -8858846708049548327
+    second: tree-animation3_5
+  - first:
+      213: 4889224859022614594
+    second: tree-animation3_6
+  - first:
+      213: 6380866959010743021
+    second: tree-animation3_7
+  - first:
+      213: 3796965258739205097
+    second: tree-animation3_8
+  - first:
+      213: 1642361432294038652
+    second: tree-animation3_9
+  - first:
+      213: -1036034962746122710
+    second: tree-animation3_10
+  - first:
+      213: -3735150558431896938
+    second: tree-animation3_11
+  - first:
+      213: -7230442243021600625
+    second: tree-animation3_12
+  - first:
+      213: -797015693756480921
+    second: tree-animation3_13
+  - first:
+      213: 7142359373396975073
+    second: tree-animation3_14
+  - first:
+      213: 3699046813062246326
+    second: tree-animation3_15
+  - first:
+      213: -7916621526432935531
+    second: tree-animation3_16
+  - first:
+      213: 1327953188883727875
+    second: tree-animation3_17
+  - first:
+      213: -3272851957625285295
+    second: tree-animation3_18
+  - first:
+      213: 743032485219375537
+    second: tree-animation3_19
+  - first:
+      213: 2825021788279589838
+    second: tree-animation3_20
+  - first:
+      213: 595704067638748994
+    second: tree-animation3_21
+  - first:
+      213: -7318643200101488198
+    second: tree-animation3_22
+  - first:
+      213: -8037471702999887181
+    second: tree-animation3_23
+  - first:
+      213: -343331384044034005
+    second: tree-animation3_24
+  - first:
+      213: -321222607638879642
+    second: tree-animation3_25
+  - first:
+      213: -2619656773825946742
+    second: tree-animation3_26
+  - first:
+      213: 252013448050142177
+    second: tree-animation3_27
+  - first:
+      213: 3435494604030745631
+    second: tree-animation3_28
+  - first:
+      213: 9088766813428053620
+    second: tree-animation3_29
+  - first:
+      213: 2001730441945407979
+    second: tree-animation3_30
+  - first:
+      213: 4078025459835644695
+    second: tree-animation3_31
+  - first:
+      213: -108420378757028493
+    second: tree-animation3_32
+  - first:
+      213: 8189133232708960356
+    second: tree-animation3_33
+  - first:
+      213: -7212009464112394676
+    second: tree-animation3_34
+  - first:
+      213: 2287166356840710701
+    second: tree-animation3_35
+  - first:
+      213: -7926171425217799075
+    second: tree-animation3_36
+  - first:
+      213: 2473133230253070473
+    second: tree-animation3_37
+  - first:
+      213: -2374942717650798359
+    second: tree-animation3_38
+  - first:
+      213: -4871509035650002341
+    second: tree-animation3_39
+  - first:
+      213: -7909338326103785157
+    second: tree-animation3_40
+  - first:
+      213: 2111770197338136071
+    second: tree-animation3_41
+  - first:
+      213: -7089701542981789880
+    second: tree-animation3_42
+  - first:
+      213: 5627988214240450306
+    second: tree-animation3_43
+  - first:
+      213: -5614431290718851244
+    second: tree-animation3_44
+  - first:
+      213: -70726492477814232
+    second: tree-animation3_45
+  - first:
+      213: 8566982427484593496
+    second: tree-animation3_46
+  - first:
+      213: 8616909045571196380
+    second: tree-animation3_47
+  - first:
+      213: 4644024446340164501
+    second: tree-animation3_48
+  - first:
+      213: 3830909650871184888
+    second: tree-animation3_49
+  - first:
+      213: 5791821488384484677
+    second: tree-animation3_50
+  - first:
+      213: 4178687228548647109
+    second: tree-animation3_51
+  - first:
+      213: 3898565648173978262
+    second: tree-animation3_52
+  - first:
+      213: 1954407286311985923
+    second: tree-animation3_53
+  - first:
+      213: -6819888747030654464
+    second: tree-animation3_54
+  - first:
+      213: -944889055429050997
+    second: tree-animation3_55
+  - first:
+      213: -1955730956196518812
+    second: tree-animation3_56
+  - first:
+      213: 2191070292358279032
+    second: tree-animation3_57
+  - first:
+      213: 5601171016323061279
+    second: tree-animation3_58
+  - first:
+      213: 535879282928453922
+    second: tree-animation3_59
+  - first:
+      213: -4959028203053572934
+    second: tree-animation3_60
+  - first:
+      213: -7832448378764757509
+    second: tree-animation3_61
+  - first:
+      213: -2109114506675323324
+    second: tree-animation3_62
+  externalObjects: {}
+  serializedVersion: 11
+  mipmaps:
+    mipMapMode: 0
+    enableMipMap: 0
+    sRGBTexture: 1
+    linearTexture: 0
+    fadeOut: 0
+    borderMipMap: 0
+    mipMapsPreserveCoverage: 0
+    alphaTestReferenceValue: 0.5
+    mipMapFadeDistanceStart: 1
+    mipMapFadeDistanceEnd: 3
+  bumpmap:
+    convertToNormalMap: 0
+    externalNormalMap: 0
+    heightScale: 0.25
+    normalMapFilter: 0
+  isReadable: 0
+  streamingMipmaps: 0
+  streamingMipmapsPriority: 0
+  vTOnly: 0
+  grayScaleToAlpha: 0
+  generateCubemap: 6
+  cubemapConvolution: 0
+  seamlessCubemap: 0
+  textureFormat: 1
+  maxTextureSize: 2048
+  textureSettings:
+    serializedVersion: 2
+    filterMode: -1
+    aniso: -1
+    mipBias: -100
+    wrapU: 1
+    wrapV: 1
+    wrapW: 1
+  nPOTScale: 0
+  lightmap: 0
+  compressionQuality: 50
+  spriteMode: 2
+  spriteExtrude: 1
+  spriteMeshType: 1
+  alignment: 0
+  spritePivot: {x: 0.5, y: 0.5}
+  spritePixelsToUnits: 100
+  spriteBorder: {x: 0, y: 0, z: 0, w: 0}
+  spriteGenerateFallbackPhysicsShape: 1
+  alphaUsage: 1
+  alphaIsTransparency: 1
+  spriteTessellationDetail: -1
+  textureType: 8
+  textureShape: 1
+  singleChannelComponent: 0
+  flipbookRows: 1
+  flipbookColumns: 1
+  maxTextureSizeSet: 0
+  compressionQualitySet: 0
+  textureFormatSet: 0
+  ignorePngGamma: 0
+  applyGammaDecoding: 0
+  platformSettings:
+  - serializedVersion: 3
+    buildTarget: DefaultTexturePlatform
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 3
+    buildTarget: Standalone
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 3
+    buildTarget: Windows Store Apps
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 3
+    buildTarget: Android
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 3
+    buildTarget: WebGL
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  spriteSheet:
+    serializedVersion: 2
+    sprites:
+    - serializedVersion: 2
+      name: tree-animation3_0
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 1440
+        width: 105
+        height: 180
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: c6f3d6d40699e3450800000000000000
+      internalID: 6070457986636922732
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: tree-animation3_1
+      rect:
+        serializedVersion: 2
+        x: 105
+        y: 1440
+        width: 105
+        height: 180
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: efd0a8a5e8f69eb50800000000000000
+      internalID: 6622947384220061182
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: tree-animation3_2
+      rect:
+        serializedVersion: 2
+        x: 210
+        y: 1440
+        width: 105
+        height: 180
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: a678d0ad66a7450a0800000000000000
+      internalID: -6893750547433814166
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: tree-animation3_3
+      rect:
+        serializedVersion: 2
+        x: 315
+        y: 1440
+        width: 105
+        height: 180
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 71f12a2a77978a260800000000000000
+      internalID: 7109065566540930839
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: tree-animation3_4
+      rect:
+        serializedVersion: 2
+        x: 420
+        y: 1440
+        width: 105
+        height: 180
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 34a2025f73ff7be30800000000000000
+      internalID: 4519361366890392131
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: tree-animation3_5
+      rect:
+        serializedVersion: 2
+        x: 525
+        y: 1440
+        width: 105
+        height: 180
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 9db611feadd0f0580800000000000000
+      internalID: -8858846708049548327
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: tree-animation3_6
+      rect:
+        serializedVersion: 2
+        x: 630
+        y: 1440
+        width: 105
+        height: 180
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 2406d05ea140ad340800000000000000
+      internalID: 4889224859022614594
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: tree-animation3_7
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 1260
+        width: 105
+        height: 180
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: de2ccd221b46d8850800000000000000
+      internalID: 6380866959010743021
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: tree-animation3_8
+      rect:
+        serializedVersion: 2
+        x: 105
+        y: 1260
+        width: 105
+        height: 180
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 9e346af19c781b430800000000000000
+      internalID: 3796965258739205097
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: tree-animation3_9
+      rect:
+        serializedVersion: 2
+        x: 210
+        y: 1260
+        width: 105
+        height: 180
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: c7c10b46507dac610800000000000000
+      internalID: 1642361432294038652
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: tree-animation3_10
+      rect:
+        serializedVersion: 2
+        x: 315
+        y: 1260
+        width: 105
+        height: 180
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: a2ed1a6c0b34f91f0800000000000000
+      internalID: -1036034962746122710
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: tree-animation3_11
+      rect:
+        serializedVersion: 2
+        x: 420
+        y: 1260
+        width: 105
+        height: 180
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 69a90165b541a2cc0800000000000000
+      internalID: -3735150558431896938
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: tree-animation3_12
+      rect:
+        serializedVersion: 2
+        x: 525
+        y: 1260
+        width: 105
+        height: 180
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: f8808b7a61f48ab90800000000000000
+      internalID: -7230442243021600625
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: tree-animation3_13
+      rect:
+        serializedVersion: 2
+        x: 630
+        y: 1260
+        width: 105
+        height: 180
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 762cb35037e60f4f0800000000000000
+      internalID: -797015693756480921
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: tree-animation3_14
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 1080
+        width: 105
+        height: 180
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 1ed128d1202ce1360800000000000000
+      internalID: 7142359373396975073
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: tree-animation3_15
+      rect:
+        serializedVersion: 2
+        x: 105
+        y: 1080
+        width: 105
+        height: 180
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 6bfad146a77a55330800000000000000
+      internalID: 3699046813062246326
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: tree-animation3_16
+      rect:
+        serializedVersion: 2
+        x: 210
+        y: 1080
+        width: 105
+        height: 180
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 59111cf6aa2822290800000000000000
+      internalID: -7916621526432935531
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: tree-animation3_17
+      rect:
+        serializedVersion: 2
+        x: 315
+        y: 1080
+        width: 105
+        height: 180
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 30603c5b366dd6210800000000000000
+      internalID: 1327953188883727875
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: tree-animation3_18
+      rect:
+        serializedVersion: 2
+        x: 420
+        y: 1080
+        width: 105
+        height: 180
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 1559d4f1c7e7492d0800000000000000
+      internalID: -3272851957625285295
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: tree-animation3_19
+      rect:
+        serializedVersion: 2
+        x: 525
+        y: 1080
+        width: 105
+        height: 180
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 1b9931acb18cf4a00800000000000000
+      internalID: 743032485219375537
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: tree-animation3_20
+      rect:
+        serializedVersion: 2
+        x: 630
+        y: 1080
+        width: 105
+        height: 180
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: ecbc42d495e743720800000000000000
+      internalID: 2825021788279589838
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: tree-animation3_21
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 900
+        width: 105
+        height: 180
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 247ecde71bd544800800000000000000
+      internalID: 595704067638748994
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: tree-animation3_22
+      rect:
+        serializedVersion: 2
+        x: 105
+        y: 900
+        width: 105
+        height: 180
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: ab96f1c09c4fe6a90800000000000000
+      internalID: -7318643200101488198
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: tree-animation3_23
+      rect:
+        serializedVersion: 2
+        x: 210
+        y: 900
+        width: 105
+        height: 180
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 3b2107a021a257090800000000000000
+      internalID: -8037471702999887181
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: tree-animation3_24
+      rect:
+        serializedVersion: 2
+        x: 315
+        y: 900
+        width: 105
+        height: 180
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: b28efcddced3c3bf0800000000000000
+      internalID: -343331384044034005
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: tree-animation3_25
+      rect:
+        serializedVersion: 2
+        x: 420
+        y: 900
+        width: 105
+        height: 180
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 6622cd18db9ca8bf0800000000000000
+      internalID: -321222607638879642
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: tree-animation3_26
+      rect:
+        serializedVersion: 2
+        x: 525
+        y: 900
+        width: 105
+        height: 180
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: a8b98a23b0c15abd0800000000000000
+      internalID: -2619656773825946742
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: tree-animation3_27
+      rect:
+        serializedVersion: 2
+        x: 630
+        y: 900
+        width: 105
+        height: 180
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 1eb66a155e45f7300800000000000000
+      internalID: 252013448050142177
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: tree-animation3_28
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 720
+        width: 105
+        height: 180
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: f1c160de3245daf20800000000000000
+      internalID: 3435494604030745631
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: tree-animation3_29
+      rect:
+        serializedVersion: 2
+        x: 105
+        y: 720
+        width: 105
+        height: 180
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 476fcb03349c12e70800000000000000
+      internalID: 9088766813428053620
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: tree-animation3_30
+      rect:
+        serializedVersion: 2
+        x: 210
+        y: 720
+        width: 105
+        height: 180
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: be1ed383b3397cb10800000000000000
+      internalID: 2001730441945407979
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: tree-animation3_31
+      rect:
+        serializedVersion: 2
+        x: 315
+        y: 720
+        width: 105
+        height: 180
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 71ba086ac8e089830800000000000000
+      internalID: 4078025459835644695
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: tree-animation3_32
+      rect:
+        serializedVersion: 2
+        x: 420
+        y: 720
+        width: 105
+        height: 180
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 37526cd6d30de7ef0800000000000000
+      internalID: -108420378757028493
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: tree-animation3_33
+      rect:
+        serializedVersion: 2
+        x: 525
+        y: 720
+        width: 105
+        height: 180
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 460c6f98945a5a170800000000000000
+      internalID: 8189133232708960356
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: tree-animation3_34
+      rect:
+        serializedVersion: 2
+        x: 630
+        y: 720
+        width: 105
+        height: 180
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: c4e43de6a9bc9eb90800000000000000
+      internalID: -7212009464112394676
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: tree-animation3_35
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 540
+        width: 105
+        height: 180
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: d2207b10fa5adbf10800000000000000
+      internalID: 2287166356840710701
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: tree-animation3_36
+      rect:
+        serializedVersion: 2
+        x: 105
+        y: 540
+        width: 105
+        height: 180
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: d5c9a0b5515900290800000000000000
+      internalID: -7926171425217799075
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: tree-animation3_37
+      rect:
+        serializedVersion: 2
+        x: 210
+        y: 540
+        width: 105
+        height: 180
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 988d277d195525220800000000000000
+      internalID: 2473133230253070473
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: tree-animation3_38
+      rect:
+        serializedVersion: 2
+        x: 315
+        y: 540
+        width: 105
+        height: 180
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 9e8f5886e228a0fd0800000000000000
+      internalID: -2374942717650798359
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: tree-animation3_39
+      rect:
+        serializedVersion: 2
+        x: 420
+        y: 540
+        width: 105
+        height: 180
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: b52d9f9a75ce46cb0800000000000000
+      internalID: -4871509035650002341
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: tree-animation3_40
+      rect:
+        serializedVersion: 2
+        x: 525
+        y: 540
+        width: 105
+        height: 180
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: b318338a2b26c3290800000000000000
+      internalID: -7909338326103785157
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: tree-animation3_41
+      rect:
+        serializedVersion: 2
+        x: 630
+        y: 540
+        width: 105
+        height: 180
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 70e989b4ec38e4d10800000000000000
+      internalID: 2111770197338136071
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: tree-animation3_42
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 360
+        width: 105
+        height: 180
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 847180f62025c9d90800000000000000
+      internalID: -7089701542981789880
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: tree-animation3_43
+      rect:
+        serializedVersion: 2
+        x: 105
+        y: 360
+        width: 105
+        height: 180
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 20713e56671aa1e40800000000000000
+      internalID: 5627988214240450306
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: tree-animation3_44
+      rect:
+        serializedVersion: 2
+        x: 210
+        y: 360
+        width: 105
+        height: 180
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 45f6dd4dc788512b0800000000000000
+      internalID: -5614431290718851244
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: tree-animation3_45
+      rect:
+        serializedVersion: 2
+        x: 315
+        y: 360
+        width: 105
+        height: 180
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 82a86ab31aab40ff0800000000000000
+      internalID: -70726492477814232
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: tree-animation3_46
+      rect:
+        serializedVersion: 2
+        x: 420
+        y: 360
+        width: 105
+        height: 180
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 85d9b33c02904e670800000000000000
+      internalID: 8566982427484593496
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: tree-animation3_47
+      rect:
+        serializedVersion: 2
+        x: 525
+        y: 360
+        width: 105
+        height: 180
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: cd51f136f19659770800000000000000
+      internalID: 8616909045571196380
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: tree-animation3_48
+      rect:
+        serializedVersion: 2
+        x: 630
+        y: 360
+        width: 105
+        height: 180
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 59be55cf0a3e27040800000000000000
+      internalID: 4644024446340164501
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: tree-animation3_49
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 180
+        width: 105
+        height: 180
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 8fdeacac7002a2530800000000000000
+      internalID: 3830909650871184888
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: tree-animation3_50
+      rect:
+        serializedVersion: 2
+        x: 105
+        y: 180
+        width: 105
+        height: 180
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 545a1a115fea06050800000000000000
+      internalID: 5791821488384484677
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: tree-animation3_51
+      rect:
+        serializedVersion: 2
+        x: 210
+        y: 180
+        width: 105
+        height: 180
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 5c88a1d05edadf930800000000000000
+      internalID: 4178687228548647109
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: tree-animation3_52
+      rect:
+        serializedVersion: 2
+        x: 315
+        y: 180
+        width: 105
+        height: 180
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 69253f03dcc7a1630800000000000000
+      internalID: 3898565648173978262
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: tree-animation3_53
+      rect:
+        serializedVersion: 2
+        x: 420
+        y: 180
+        width: 105
+        height: 180
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 303af0f62137f1b10800000000000000
+      internalID: 1954407286311985923
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: tree-animation3_54
+      rect:
+        serializedVersion: 2
+        x: 525
+        y: 180
+        width: 105
+        height: 180
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 002dd816153ea51a0800000000000000
+      internalID: -6819888747030654464
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: tree-animation3_55
+      rect:
+        serializedVersion: 2
+        x: 630
+        y: 180
+        width: 105
+        height: 180
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: b8d3ffa096413e2f0800000000000000
+      internalID: -944889055429050997
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: tree-animation3_56
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 0
+        width: 105
+        height: 180
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 464eba7ae09dbd4e0800000000000000
+      internalID: -1955730956196518812
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: tree-animation3_57
+      rect:
+        serializedVersion: 2
+        x: 105
+        y: 0
+        width: 105
+        height: 180
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 87f2de572de386e10800000000000000
+      internalID: 2191070292358279032
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: tree-animation3_58
+      rect:
+        serializedVersion: 2
+        x: 210
+        y: 0
+        width: 105
+        height: 180
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: f165622fc5b5bbd40800000000000000
+      internalID: 5601171016323061279
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: tree-animation3_59
+      rect:
+        serializedVersion: 2
+        x: 315
+        y: 0
+        width: 105
+        height: 180
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 229017d5e53df6700800000000000000
+      internalID: 535879282928453922
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: tree-animation3_60
+      rect:
+        serializedVersion: 2
+        x: 420
+        y: 0
+        width: 105
+        height: 180
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: abc19d59f1efd2bb0800000000000000
+      internalID: -4959028203053572934
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: tree-animation3_61
+      rect:
+        serializedVersion: 2
+        x: 525
+        y: 0
+        width: 105
+        height: 180
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: bf5742692bd8d4390800000000000000
+      internalID: -7832448378764757509
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: tree-animation3_62
+      rect:
+        serializedVersion: 2
+        x: 630
+        y: 0
+        width: 105
+        height: 180
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 44e7efed78beab2e0800000000000000
+      internalID: -2109114506675323324
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    outline: []
+    physicsShape: []
+    bones: []
+    spriteID: 5e97eb03825dee720800000000000000
+    internalID: 0
+    vertices: []
+    indices: 
+    edges: []
+    weights: []
+    secondaryTextures: []
+  spritePackingTag: 
+  pSDRemoveMatte: 0
+  pSDShowRemoveMatteOption: 0
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
