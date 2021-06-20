@@ -18,6 +18,7 @@ public class Floating : IState
         _sapling.animator.SetBool("isGrounded", _sapling.isGrounded);
         _sapling.groundMovementForce = Vector3.zero;
         _sapling.nearestTreeSpot = null;
+        _sapling.enemyNear = false;
         Debug.Log("State: Floating");
     }
 

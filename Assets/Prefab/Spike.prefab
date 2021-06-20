@@ -11,7 +11,7 @@ GameObject:
   - component: {fileID: 2111062748417305609}
   - component: {fileID: 2111062748417305607}
   - component: {fileID: 2111062748417305606}
-  m_Layer: 0
+  m_Layer: 9
   m_Name: spike (3)
   m_TagString: Spike
   m_Icon: {fileID: 0}
@@ -70,7 +70,7 @@ SpriteRenderer:
   m_AutoUVMaxAngle: 89
   m_LightmapParameters: {fileID: 0}
   m_SortingLayerID: 329182835
-  m_SortingLayer: 3
+  m_SortingLayer: 2
   m_SortingOrder: 0
   m_Sprite: {fileID: 3625043607559282579, guid: 0d267bc78a0864eb48358689b29ed20a, type: 3}
   m_Color: {r: 0.62265104, g: 0.9716981, b: 0.4355141, a: 1}
@@ -125,7 +125,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 2111062748586769193}
-  m_Layer: 0
+  m_Layer: 9
   m_Name: Spike
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -163,7 +163,7 @@ GameObject:
   - component: {fileID: 2111062749005921143}
   - component: {fileID: 2111062749005921141}
   - component: {fileID: 2111062749005921140}
-  m_Layer: 0
+  m_Layer: 9
   m_Name: spike
   m_TagString: Spike
   m_Icon: {fileID: 0}
@@ -222,7 +222,7 @@ SpriteRenderer:
   m_AutoUVMaxAngle: 89
   m_LightmapParameters: {fileID: 0}
   m_SortingLayerID: 329182835
-  m_SortingLayer: 3
+  m_SortingLayer: 2
   m_SortingOrder: 0
   m_Sprite: {fileID: 3625043607559282579, guid: 0d267bc78a0864eb48358689b29ed20a, type: 3}
   m_Color: {r: 0.62265104, g: 0.9716981, b: 0.4355141, a: 1}
@@ -279,7 +279,7 @@ GameObject:
   - component: {fileID: 2111062749679069969}
   - component: {fileID: 2111062749679069967}
   - component: {fileID: 2111062749679069966}
-  m_Layer: 0
+  m_Layer: 9
   m_Name: spike (4)
   m_TagString: Spike
   m_Icon: {fileID: 0}
@@ -338,7 +338,7 @@ SpriteRenderer:
   m_AutoUVMaxAngle: 89
   m_LightmapParameters: {fileID: 0}
   m_SortingLayerID: 329182835
-  m_SortingLayer: 3
+  m_SortingLayer: 2
   m_SortingOrder: 0
   m_Sprite: {fileID: 3625043607559282579, guid: 0d267bc78a0864eb48358689b29ed20a, type: 3}
   m_Color: {r: 0.62265104, g: 0.9716981, b: 0.4355141, a: 1}
@@ -395,7 +395,7 @@ GameObject:
   - component: {fileID: 2111062749828824044}
   - component: {fileID: 2111062749828824042}
   - component: {fileID: 2111062749828824045}
-  m_Layer: 0
+  m_Layer: 9
   m_Name: spike (1)
   m_TagString: Spike
   m_Icon: {fileID: 0}
@@ -454,7 +454,7 @@ SpriteRenderer:
   m_AutoUVMaxAngle: 89
   m_LightmapParameters: {fileID: 0}
   m_SortingLayerID: 329182835
-  m_SortingLayer: 3
+  m_SortingLayer: 2
   m_SortingOrder: 0
   m_Sprite: {fileID: 3625043607559282579, guid: 0d267bc78a0864eb48358689b29ed20a, type: 3}
   m_Color: {r: 0.62265104, g: 0.9716981, b: 0.4355141, a: 1}
@@ -511,7 +511,7 @@ GameObject:
   - component: {fileID: 2111062749852127721}
   - component: {fileID: 2111062749852127719}
   - component: {fileID: 2111062749852127718}
-  m_Layer: 0
+  m_Layer: 9
   m_Name: spike (2)
   m_TagString: Spike
   m_Icon: {fileID: 0}
@@ -570,7 +570,7 @@ SpriteRenderer:
   m_AutoUVMaxAngle: 89
   m_LightmapParameters: {fileID: 0}
   m_SortingLayerID: 329182835
-  m_SortingLayer: 3
+  m_SortingLayer: 2
   m_SortingOrder: 0
   m_Sprite: {fileID: 3625043607559282579, guid: 0d267bc78a0864eb48358689b29ed20a, type: 3}
   m_Color: {r: 0.62265104, g: 0.9716981, b: 0.4355141, a: 1}
@@ -626,7 +626,7 @@ GameObject:
   m_Component:
   - component: {fileID: 2111062750458160603}
   - component: {fileID: 2111062750458160600}
-  m_Layer: 0
+  m_Layer: 9
   m_Name: branch
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -685,7 +685,7 @@ SpriteRenderer:
   m_AutoUVMaxAngle: 89
   m_LightmapParameters: {fileID: 0}
   m_SortingLayerID: 329182835
-  m_SortingLayer: 3
+  m_SortingLayer: 2
   m_SortingOrder: 0
   m_Sprite: {fileID: 7482667652216324306, guid: db750325989564987a34393247d883b4, type: 3}
   m_Color: {r: 0.1538005, g: 0.4056604, b: 0.059353054, a: 1}

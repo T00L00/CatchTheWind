@@ -9,7 +9,7 @@ public class Sapling : MonoBehaviour
     public VectorFieldController vectorFieldController;
     public SwipeDetection swipeDetector;
     public LayerMask platformLayerMask;
-    public LayerMask treeSiteLayerMask;
+    public LayerMask obstacleLayerMask;
     public Animator animator { get; set; }
     private CapsuleCollider2D capsuleCollider;
 
@@ -50,10 +50,13 @@ public class Sapling : MonoBehaviour
         At(search, panic, EnemyNear());
         At(moveToSite, plantTree, HasReachedTarget());
         At(plantTree, search, TreePlanted());
+        At(panic, search, EnemyNotNear());
+        
 
         At(search, floating, NoLongerGrounded());
         At(moveToSite, floating, NoLongerGrounded());
         At(plantTree, floating, NoLongerGrounded());
+        At(panic, floating, NoLongerGrounded());
 
         _stateMachine.SetState(floating);
 
@@ -64,8 +67,9 @@ public class Sapling : MonoBehaviour
         Func<bool> HasTarget() => () => (IsGrounded() == true) && (nearestTreeSpot != null);
         Func<bool> HasNoTarget() => () => (IsGrounded() == true) && (nearestTreeSpot == null);
         Func<bool> HasReachedTarget() => () => (IsGrounded() == true) && (nearestTreeSpot != null) && AtTreeSpot();
-        Func<bool> TreePlanted() => () => (IsGrounded() == true) && (nearestTreeSpot.planted == true); // something needs to trigger planted change to true
+        Func<bool> TreePlanted() => () => (IsGrounded() == true) && (nearestTreeSpot.planted == true);
         Func<bool> EnemyNear() => () => (enemyNear == true) && (IsGrounded() == true);
+        Func<bool> EnemyNotNear() => () => (enemyNear == false) && (IsGrounded() == true);
     }
 
     private void Start()
@@ -148,7 +152,7 @@ public class Sapling : MonoBehaviour
     /// <summary>
     /// Apply a boxcast in the direction of facing to check for tree spot
     /// </summary>
-    public void FoundTreeSite()
+    public void Search()
     {
         // Make sure to search direction is same as facing direction
         Vector3 direction = Vector3.right;
@@ -156,24 +160,34 @@ public class Sapling : MonoBehaviour
 
         // Do a BoxCast that will only return something if a tree spot is found
         float distanceToCast = 3f;
-        RaycastHit2D raycastHitForward = Physics2D.BoxCast(capsuleCollider.bounds.center, capsuleCollider.bounds.size, 0f, direction, distanceToCast, treeSiteLayerMask);
+        RaycastHit2D raycastHitForward = Physics2D.BoxCast(capsuleCollider.bounds.center, capsuleCollider.bounds.size, 0f, direction, distanceToCast, obstacleLayerMask);
         Debug.DrawRay(capsuleCollider.bounds.center, direction * distanceToCast, Color.red);
 
-        nearestTreeSpot = raycastHitForward.collider?.gameObject.GetComponent<TreeSpot>();
-        if (nearestTreeSpot?.planted == false)
+        if (raycastHitForward.collider?.gameObject.tag == "EatingPlant")
         {
-            foundTreeSite = true;
-            Debug.Log("Open tree spot found!");
+            enemyNear = true;
             return;
         }
-        
-        // If tree spot has already been planted, do nothing
-        if (nearestTreeSpot?.planted == true)
+
+
+        if (raycastHitForward.collider?.gameObject.tag == "TreeSpot")
         {
-            foundTreeSite = false;
-            nearestTreeSpot = null;
-            Debug.Log("Tree spot already planted.");
-            return;
+            nearestTreeSpot = raycastHitForward.collider?.gameObject.GetComponent<TreeSpot>();
+            if (nearestTreeSpot?.planted == false)
+            {
+                foundTreeSite = true;
+                Debug.Log("Open tree spot found!");
+                return;
+            }
+
+            // If tree spot has already been planted, do nothing
+            if (nearestTreeSpot?.planted == true)
+            {
+                foundTreeSite = false;
+                nearestTreeSpot = null;
+                Debug.Log("Tree spot already planted.");
+                return;
+            }
         }
 
     }

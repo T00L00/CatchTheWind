@@ -28,7 +28,8 @@ public class PlantTree : IState
 
     public void OnExit() 
     {
-        _sapling.nearestTreeSpot.planted = true;
+        _sapling.animator.SetBool("isGrounded", _sapling.isGrounded);
+        _sapling.animator.SetBool("hasTarget", _sapling.nearestTreeSpot == null);
         _sapling.rigidBody.constraints = RigidbodyConstraints2D.None | RigidbodyConstraints2D.FreezeRotation;
     }
 
