@@ -14,10 +14,16 @@ public class Panic : IState
 
     public void OnEnter() 
     {
+        _sapling.animator.SetBool("enemyNear", _sapling.enemyNear);
+        _sapling.animator.SetBool("isGrounded", _sapling.isGrounded);
         Debug.Log("State: Panic");
     }
 
-    public void OnExit() { }
+    public void OnExit() 
+    {
+        _sapling.animator.SetBool("enemyNear", false);
+        _sapling.animator.SetBool("isGrounded", _sapling.isGrounded);
+    }
 
 
 }

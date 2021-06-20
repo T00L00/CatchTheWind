@@ -7,7 +7,6 @@ public class TreeGrow : MonoBehaviour
     [SerializeField] EdgeCollider2D m_EdgeCollider;
     [SerializeField] Animation m_Animation;
 
-
     private bool m_CheckGrowth = true;
 
     private void OnCollisionEnter2D(Collision2D collision)
