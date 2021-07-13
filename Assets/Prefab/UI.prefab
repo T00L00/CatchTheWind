@@ -658,43 +658,43 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: fab0843b7f7e2b441a9d4b1b2a8a2fd2, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  m_PlayerHealthText: {fileID: 4032034789774847367}
-  m_TreeCountText: {fileID: 4032034790093898862}
-  m_ForestHealthText: {fileID: 4032034788610184508}
-  m_PlayerStartHealth: 5
-  m_ForestHealthBar: {fileID: 4032034789874280012}
-  m_ForestBarGradient:
+  PlayerHealthText: {fileID: 4032034789774847367}
+  TreeCountText: {fileID: 4032034790093898862}
+  ForestHealthText: {fileID: 4032034788610184508}
+  sapling: {fileID: 0}
+  ForestHealthBar: {fileID: 4032034789874280012}
+  ForestBarGradient:
     serializedVersion: 2
-    key0: {r: 1, g: 0, b: 0, a: 1}
-    key1: {r: 1, g: 0.88767457, b: 0, a: 1}
-    key2: {r: 0.19417703, g: 1, b: 0, a: 1}
-    key3: {r: 0, g: 0, b: 0, a: 0}
-    key4: {r: 0, g: 0, b: 0, a: 0}
+    key0: {r: 0.3962264, g: 0.23150285, b: 0.0504628, a: 1}
+    key1: {r: 0.6132076, g: 0.32560983, b: 0, a: 1}
+    key2: {r: 0.13629678, g: 0.8773585, b: 0, a: 1}
+    key3: {r: 0.3887816, g: 0.58525324, b: 0, a: 0}
+    key4: {r: 0.13629678, g: 0.8773585, b: 0, a: 0}
     key5: {r: 0, g: 0, b: 0, a: 0}
     key6: {r: 0, g: 0, b: 0, a: 0}
     key7: {r: 0, g: 0, b: 0, a: 0}
-    ctime0: 24063
-    ctime1: 42351
-    ctime2: 55056
-    ctime3: 0
-    ctime4: 0
+    ctime0: 0
+    ctime1: 19661
+    ctime2: 65535
+    ctime3: 52043
+    ctime4: 65535
     ctime5: 0
     ctime6: 0
     ctime7: 0
     atime0: 0
-    atime1: 65535
-    atime2: 53131
+    atime1: 19661
+    atime2: 65535
     atime3: 0
     atime4: 0
     atime5: 0
     atime6: 0
     atime7: 0
-    m_Mode: 1
+    m_Mode: 0
     m_NumColorKeys: 3
-    m_NumAlphaKeys: 2
-  m_ForestBarImage: {fileID: 4032034789048139350}
-  m_DepletionRate: 0.4
-  m_TotalTreeCount: 5
+    m_NumAlphaKeys: 3
+  ForestBarImage: {fileID: 4032034788911659084}
+  DepletionRate: 0.5
+  TotalTreeCount: 5
 --- !u!1 &4032034789774847369
 GameObject:
   m_ObjectHideFlags: 0

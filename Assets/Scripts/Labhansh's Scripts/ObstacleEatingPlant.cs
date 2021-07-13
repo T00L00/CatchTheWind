@@ -2,26 +2,25 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
-public class ObstacleEatingPlant : MonoBehaviour
+namespace CTW
 {
-    [SerializeField] Animator m_Animation;
-    [SerializeField] LayerMask m_PlayerLM;
-    [SerializeField] BoxCollider2D m_FaceBoxCollider;
-    void FixedUpdate()
+    public class ObstacleEatingPlant : MonoBehaviour
     {
-     
-        if (Physics2D.Raycast(transform.position + new Vector3(0, m_FaceBoxCollider.bounds.extents.y, 0), new Vector2(-1, 1), 1.5f, m_PlayerLM))
-        {
-            m_Animation.SetTrigger("Eat");
-         //   StartCoroutine(eatAnim());
-            GameObject.FindGameObjectWithTag(StaticFields.PLAYER_TAG_NAME).GetComponent<PlayerMovement>().Die();
-        }
-    }
+        Animator animator;
+        [SerializeField] Sapling sapling;
 
-    private IEnumerator eatAnim()
-    {
-        
-        yield return new WaitForSeconds(0.5f);
-     
+        private void Start()
+        {
+            animator = GetComponent<Animator>();
+        }
+
+        private void OnCollisionEnter2D(Collision2D collision)
+        {
+            if (collision.gameObject.tag == StaticFields.SAPLING_TAG)
+            {
+                animator.Play("Eat");
+                sapling.gameObject.SetActive(false);
+            }
+        }
     }
 }

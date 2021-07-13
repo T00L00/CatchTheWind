@@ -1,49 +1,52 @@
 using UnityEngine;
 
-public class Singleton<T> : MonoBehaviour
-    where T : Component
+namespace CTW
 {
-    private static T _instance;
-    public static T Instance
+    public class Singleton<T> : MonoBehaviour
+        where T : Component
     {
-        get
+        private static T _instance;
+        public static T Instance
         {
-            if (_instance == null)
+            get
             {
-                var objs = FindObjectsOfType(typeof(T)) as T[];
-                if (objs.Length > 0)
-                    _instance = objs[0];
-                if (objs.Length > 1)
-                {
-                    Debug.LogError("There is more than one " + typeof(T).Name + " in the scene.");
-                }
                 if (_instance == null)
                 {
-                    GameObject obj = new GameObject();
-                    obj.hideFlags = HideFlags.HideAndDontSave;
-                    _instance = obj.AddComponent<T>();
+                    var objs = FindObjectsOfType(typeof(T)) as T[];
+                    if (objs.Length > 0)
+                        _instance = objs[0];
+                    if (objs.Length > 1)
+                    {
+                        Debug.LogError("There is more than one " + typeof(T).Name + " in the scene.");
+                    }
+                    if (_instance == null)
+                    {
+                        GameObject obj = new GameObject();
+                        obj.hideFlags = HideFlags.HideAndDontSave;
+                        _instance = obj.AddComponent<T>();
+                    }
                 }
+                return _instance;
             }
-            return _instance;
         }
     }
-}
 
-public class SingletonPersistant<T> : MonoBehaviour
-    where T : Component
-{
-    public static T Instance { get; private set; }
-
-    public virtual void Awake()
+    public class SingletonPersistant<T> : MonoBehaviour
+        where T : Component
     {
-        if (Instance == null)
+        public static T Instance { get; private set; }
+
+        public virtual void Awake()
         {
-            Instance = this as T;
-            DontDestroyOnLoad(this);
-        }
-        else
-        {
-            Destroy(gameObject);
+            if (Instance == null)
+            {
+                Instance = this as T;
+                DontDestroyOnLoad(this);
+            }
+            else
+            {
+                Destroy(gameObject);
+            }
         }
     }
 }

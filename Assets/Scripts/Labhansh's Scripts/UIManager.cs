@@ -1,96 +1,102 @@
 using System.Collections;
-using System.Collections.Generic;
 using UnityEngine;
 using TMPro;
 using UnityEngine.UI;
-public class UIManager : MonoBehaviour
+
+namespace CTW.UI
 {
-    // Text References
-    [SerializeField] TextMeshProUGUI m_PlayerHealthText;
-    [SerializeField] TextMeshProUGUI m_TreeCountText;
-    [SerializeField] TextMeshProUGUI m_ForestHealthText;
-
-    //Player Health
-    [SerializeField] int m_PlayerStartHealth = 3;
-    private int m_PlayerCurrentHealth;
-    private const string HEALTH_UI_TEXT = "Health: ";
-
-    // More Forest Health related stuff
-    [SerializeField] Slider m_ForestHealthBar;
-    [SerializeField] Gradient m_ForestBarGradient;
-    [SerializeField] Image m_ForestBarImage;
-    [SerializeField] float m_DepletionRate;
-
-    // Tree Count
-    [SerializeField] private int m_TotalTreeCount = 5;
-    private int m_CurrentTreeCount = 0;
-    
-
-
-    private void Start()
+    public class UIManager : MonoBehaviour
     {
-        // Player Health
-        m_PlayerHealthText.text = HEALTH_UI_TEXT + m_PlayerStartHealth.ToString();
-        m_PlayerCurrentHealth = m_PlayerStartHealth;
+        // Text References
+        [SerializeField] TextMeshProUGUI PlayerHealthText;
+        [SerializeField] TextMeshProUGUI TreeCountText;
+        [SerializeField] TextMeshProUGUI ForestHealthText;
+
+        // Sapling reference
+        [SerializeField] Sapling sapling;
+        private const string HEALTH_UI_TEXT = "Health: ";
+
+        // More Forest Health related stuff
+        [SerializeField] Slider ForestHealthBar;
+        [SerializeField] Gradient ForestBarGradient;
+        [SerializeField] Image ForestBarImage;
+        [SerializeField] float DepletionRate;
 
         // Tree Count
-        m_TreeCountText.text = m_CurrentTreeCount.ToString() + "/" + m_TotalTreeCount.ToString();
+        [SerializeField] int ForestHealthIncreasePerTree = 20;
+        private int TotalTreeCount;
+        private int CurrentTreeCount;        
 
-        // Forest Health
-        m_ForestHealthBar.value = 100;       
-        m_ForestBarImage.color = m_ForestBarGradient.Evaluate(1f);
-        StartCoroutine(decreaseForestHealth(m_DepletionRate));
+        TreeSpot[] treeSpots;
 
-    }
-
-
-    // private
-
- 
-    private IEnumerator decreaseForestHealth(float amount)
-    {
-        while (true)
+        private void Start()
         {
-      //  Debug.Log("Yoo");
-            m_ForestHealthBar.value -= amount;
-            yield return new WaitForSeconds(0.1f);
-            m_ForestBarImage.color = m_ForestBarGradient.Evaluate(m_ForestHealthBar.normalizedValue);
+            GetTreeSpots();
 
-            if (m_ForestHealthBar.value < 30f)
-                m_ForestHealthText.enabled = true;
-            else
-                m_ForestHealthText.enabled = false;
+            // Player Health
+            PlayerHealthText.text = HEALTH_UI_TEXT + sapling.health.ToString();
 
+            // Tree Count
+            TreeCountText.text = CurrentTreeCount.ToString() + "/" + TotalTreeCount.ToString();
+
+            // Forest Health
+            ForestHealthBar.value = 100;
+            ForestBarImage.color = ForestBarGradient.Evaluate(1f);
+            StartCoroutine(decreaseForestHealth(DepletionRate));
+        }
+
+        // Color gradient not working currently
+        private IEnumerator decreaseForestHealth(float amount)
+        {
+            while (true)
+            {
+                //  Debug.Log("Yoo");
+                ForestHealthBar.value -= amount;
+                yield return new WaitForSeconds(0.1f);
+                ForestBarImage.color = ForestBarGradient.Evaluate(ForestHealthBar.normalizedValue);
+
+                if (ForestHealthBar.value < 30f)
+                    ForestHealthText.enabled = true;
+                else
+                    ForestHealthText.enabled = false;
+            }
+        }
+
+        private void OnEnable()
+        {
+            // Subscribe UI to Health monitoring event
+            sapling.ChangedHealth += OnChangedHealth;
+        }
+
+        private void OnDisable()
+        {
+            sapling.ChangedHealth -= OnChangedHealth;
+        }
+
+        private void OnChangedHealth()
+        {
+            PlayerHealthText.text =  HEALTH_UI_TEXT + sapling.health.ToString();
+        }
+
+        private void GetTreeSpots()
+        {
+            GameObject[] treeSpotsGO = GameObject.FindGameObjectsWithTag("TreeSpot");
+            treeSpots = new TreeSpot[treeSpotsGO.Length];
+            for (int i = 0; i < treeSpotsGO.Length; i++)
+            {
+                treeSpots[i] = treeSpotsGO[i].GetComponent<TreeSpot>();
+                treeSpots[i].OnFinishGrow += OnFinishTreeGrow;
+            }
+
+            TotalTreeCount = treeSpots.Length;
+        }
+
+        private void OnFinishTreeGrow()
+        {
+            CurrentTreeCount += 1;
+            TreeCountText.text = CurrentTreeCount.ToString() + "/" + TotalTreeCount.ToString();
+            ForestHealthBar.value += ForestHealthIncreasePerTree;
         }
     }
-
-
-
-    // public
-    public void reducePlayerHealth(int value)
-    {
-        if (m_PlayerCurrentHealth > 0)
-        {
-            m_PlayerCurrentHealth -= value;
-            m_PlayerHealthText.text = HEALTH_UI_TEXT + m_PlayerCurrentHealth.ToString();
-        }
-    }
-    public int getPlayerHealth()
-    {
-        return m_PlayerCurrentHealth;
-    }
-
-    public void increaseTreeCount()
-    {
-        m_CurrentTreeCount += 1;
-        m_TreeCountText.text = m_CurrentTreeCount.ToString() + "/" + m_TotalTreeCount.ToString();
-    }
-
-    public void increaseForestHealth(float amount)
-    {
-        m_ForestHealthBar.value += amount;
-    }
-
-
 
 }

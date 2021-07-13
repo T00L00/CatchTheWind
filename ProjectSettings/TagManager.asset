@@ -8,6 +8,8 @@ TagManager:
   - TreeSpot
   - PlatformEndPoint
   - EatingPlant
+  - Sapling
+  - PushingPlant
   layers:
   - Default
   - TransparentFX
@@ -15,7 +17,7 @@ TagManager:
   - 
   - Water
   - UI
-  - Player
+  - Sapling
   - Platform
   - TreeSite
   - Obstacle
@@ -54,6 +56,6 @@ TagManager:
   - name: Ground
     uniqueID: 2165430933
     locked: 0
-  - name: Player
+  - name: Sapling
     uniqueID: 2248142949
     locked: 0

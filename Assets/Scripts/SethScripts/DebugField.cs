@@ -2,49 +2,52 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
-/// <summary>
-/// Monobehavior to draw vector field. Toggleable.
-/// </summary>
-public class DebugField : MonoBehaviour
+namespace CTW.Wind
 {
-    public VectorFieldController controller;
-    public bool toggleOn = false;
-    public bool normalizeVectors = true;
-
-    // Desired cell size
-    public float spacing;
-
-    // Desired grid dimensions (x rows by y columns)
-    public Vector2Int gridSize;
-
-    // Grid start location in world space
-    public Vector2 origin;
-
-    private void OnDrawGizmos()
+    /// <summary>
+    /// Monobehavior to draw vector field. Toggleable.
+    /// </summary>
+    public class DebugField : MonoBehaviour
     {
-        Grid sceneGrid = new Grid(spacing, gridSize);
-        sceneGrid.origin = origin;
-        sceneGrid.CreateGrid();
-        if (toggleOn)
+        public VectorFieldController controller;
+        public bool toggleOn = false;
+        public bool normalizeVectors = true;
+
+        // Desired cell size
+        public float spacing;
+
+        // Desired grid dimensions (x rows by y columns)
+        public Vector2Int gridSize;
+
+        // Grid start location in world space
+        public Vector2 origin;
+
+        private void OnDrawGizmos()
         {
-            Vector2 force;
-            Vector2 pos;
-            for (int i = 0; i < sceneGrid.gridSize.x; i++)
+            Grid sceneGrid = new Grid(spacing, gridSize);
+            sceneGrid.origin = origin;
+            sceneGrid.CreateGrid();
+            if (toggleOn)
             {
-                for (int j = 0; j < sceneGrid.gridSize.y; j++)
+                Vector2 force;
+                Vector2 pos;
+                for (int i = 0; i < sceneGrid.gridSize.x; i++)
                 {
-                    pos = sceneGrid.grid[i, j].worldPos;
-                    force = VectorField.VectorAtPosition(controller.vectorField, pos);
-                    if (normalizeVectors)
+                    for (int j = 0; j < sceneGrid.gridSize.y; j++)
                     {
-                        force = force.normalized;
+                        pos = sceneGrid.grid[i, j].worldPos;
+                        force = VectorField.VectorAtPosition(controller.vectorField, pos);
+                        if (normalizeVectors)
+                        {
+                            force = force.normalized;
+                        }
+                        DrawArrow.ForGizmo(pos, force, Color.grey);
                     }
-                    DrawArrow.ForGizmo(pos, force, Color.grey);
                 }
+
             }
-            
+
+
         }
-        
-        
     }
 }

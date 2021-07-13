@@ -1,11 +1,14 @@
 using UnityEngine;
 
-public class Utils : MonoBehaviour
+namespace CTW.UI
 {
-    // Get world position from screen position
-    public static Vector3 ScreenToWorld(Camera camera, Vector3 position)
+    public class Utils : MonoBehaviour
     {
-        position.z = camera.nearClipPlane;
-        return camera.ScreenToWorldPoint(position);
+        // Get world position from screen position
+        public static Vector3 ScreenToWorld(Camera camera, Vector3 position)
+        {
+            position.z = camera.nearClipPlane;
+            return camera.ScreenToWorldPoint(position);
+        }
     }
 }

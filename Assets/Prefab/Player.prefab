@@ -13,11 +13,10 @@ GameObject:
   - component: {fileID: 937328884770088168}
   - component: {fileID: 937328884770088171}
   - component: {fileID: 1012687493}
-  - component: {fileID: 1012687494}
-  - component: {fileID: 825804677}
+  - component: {fileID: 605845387570908166}
   m_Layer: 6
   m_Name: Player
-  m_TagString: Player
+  m_TagString: Sapling
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -153,7 +152,7 @@ BoxCollider2D:
   serializedVersion: 2
   m_Size: {x: 0.29571992, y: 0.39750782}
   m_EdgeRadius: 0
---- !u!114 &1012687494
+--- !u!114 &605845387570908166
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -162,26 +161,17 @@ MonoBehaviour:
   m_GameObject: {fileID: 937328884770088167}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 69e2ebf7eca63c44b990a659835bd3ef, type: 3}
+  m_Script: {fileID: 11500000, guid: 45ee500ace2f1d941bd28979a62bdb4a, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
   rigidBody: {fileID: 937328884770088171}
   vectorFieldController: {fileID: 0}
+  swipeDetector: {fileID: 0}
+  platformLayerMask:
+    serializedVersion: 2
+    m_Bits: 0
+  obstacleLayerMask:
+    serializedVersion: 2
+    m_Bits: 0
   sideForceNeg: -5
   sideForcePos: 5
---- !u!114 &825804677
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 937328884770088167}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 3ec4c9fc03c4e0349ae5e29fc175397d, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  m_Speed: 0
-  m_Rb: {fileID: 937328884770088171}
-  m_UIManager: {fileID: 0}
-  m_GameOver: {fileID: 0}
