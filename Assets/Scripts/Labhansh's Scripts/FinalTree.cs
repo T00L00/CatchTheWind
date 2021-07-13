@@ -2,15 +2,18 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
-public class FinalTree : MonoBehaviour
+namespace CTW
 {
-   
-    [SerializeField] LevelUp m_LevelUp;
-
-
-    private void OnCollisionEnter2D(Collision2D collision)
+    public class FinalTree : MonoBehaviour
     {
-        if (collision.gameObject.tag == StaticFields.PLAYER_TAG_NAME)
-            m_LevelUp.callLevelUp();
+
+        [SerializeField] LevelUp m_LevelUp;
+
+
+        private void OnCollisionEnter2D(Collision2D collision)
+        {
+            if (collision.gameObject.tag == StaticFields.SAPLING_TAG)
+                m_LevelUp.callLevelUp();
+        }
     }
 }

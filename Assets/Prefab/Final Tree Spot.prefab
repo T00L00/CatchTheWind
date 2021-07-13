@@ -422,7 +422,6 @@ GameObject:
   - component: {fileID: 7640141185999168044}
   - component: {fileID: 7640141185999168046}
   - component: {fileID: 7640141185999168045}
-  - component: {fileID: 7640141185999168047}
   - component: {fileID: 7640141185999168040}
   m_Layer: 0
   m_Name: platform
@@ -519,20 +518,6 @@ EdgeCollider2D:
   m_AdjacentEndPoint: {x: 0, y: 0}
   m_UseAdjacentStartPoint: 0
   m_UseAdjacentEndPoint: 0
---- !u!114 &7640141185999168047
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 7640141185999168043}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 69f56a82f59ee9b4f9b66f8b1a7e0a5b, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  m_EdgeCollider: {fileID: 7640141185999168045}
-  m_Animation: {fileID: 7640141184144957312}
 --- !u!114 &7640141185999168040
 MonoBehaviour:
   m_ObjectHideFlags: 0
