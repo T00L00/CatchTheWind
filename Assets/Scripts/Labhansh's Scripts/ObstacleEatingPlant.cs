@@ -7,7 +7,12 @@ namespace CTW
     public class ObstacleEatingPlant : MonoBehaviour
     {
         Animator animator;
-        [SerializeField] Sapling sapling;
+        Sapling sapling;
+
+        private void Awake()
+        {
+            sapling = GameObject.Find("Sapling").GetComponent<Sapling>();
+        }
 
         private void Start()
         {

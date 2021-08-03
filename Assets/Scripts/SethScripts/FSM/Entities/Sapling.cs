@@ -166,7 +166,7 @@ namespace CTW
         /// <returns></returns>
         private bool IsGrounded()
         {
-            float extraHeightText = 0.2f;
+            float extraHeightText = 0.5f;
             RaycastHit2D raycastHit = Physics2D.BoxCast(capsuleCollider.bounds.center, capsuleCollider.bounds.size, 0f, Vector2.down, extraHeightText, platformLayerMask);
 
             //Color rayColor;

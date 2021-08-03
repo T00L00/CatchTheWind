@@ -1,25 +1,25 @@
 fileFormatVersion: 2
-guid: 1f7ab4e3ff041574b8793c2182e3e749
+guid: ae31a3de27bd5d74298f9a5116293d0e
 TextureImporter:
   internalIDToNameTable:
   - first:
-      213: 7725109974431034274
-    second: 0
+      213: -822281458742281252
+    second: carnivore3_0
   - first:
-      213: -2106308855686417301
-    second: 2
+      213: -8201520796295677494
+    second: carnivore3_1
   - first:
-      213: 9004698008348783069
-    second: 3
+      213: 5279338485010271107
+    second: carnivore3_2
   - first:
-      213: -568848547397092415
-    second: 4
+      213: -4317531315198659756
+    second: carnivore3_3
   - first:
-      213: 8593166970314079212
-    second: 5
+      213: 3439558871202297173
+    second: carnivore3_4
   - first:
-      213: 8088548046464855199
-    second: 7
+      213: 2040242422010900407
+    second: carnivore3_5
   externalObjects: {}
   serializedVersion: 11
   mipmaps:
@@ -50,9 +50,9 @@ TextureImporter:
   maxTextureSize: 2048
   textureSettings:
     serializedVersion: 2
-    filterMode: 0
-    aniso: -1
-    mipBias: -100
+    filterMode: 1
+    aniso: 1
+    mipBias: 0
     wrapU: 1
     wrapV: 1
     wrapW: 1
@@ -86,7 +86,7 @@ TextureImporter:
     maxTextureSize: 2048
     resizeAlgorithm: 0
     textureFormat: -1
-    textureCompression: 2
+    textureCompression: 1
     compressionQuality: 50
     crunchedCompression: 0
     allowsAlphaSplitting: 0
@@ -98,7 +98,79 @@ TextureImporter:
     maxTextureSize: 2048
     resizeAlgorithm: 0
     textureFormat: -1
-    textureCompression: 2
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 3
+    buildTarget: Windows Store Apps
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 3
+    buildTarget: tvOS
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 3
+    buildTarget: iPhone
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 3
+    buildTarget: Lumin
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 3
+    buildTarget: Android
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 3
+    buildTarget: WebGL
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
     compressionQuality: 50
     crunchedCompression: 0
     allowsAlphaSplitting: 0
@@ -109,13 +181,13 @@ TextureImporter:
     serializedVersion: 2
     sprites:
     - serializedVersion: 2
-      name: 0
+      name: carnivore3_0
       rect:
         serializedVersion: 2
-        x: 42
-        y: 20
-        width: 68
-        height: 136
+        x: 0
+        y: 0
+        width: 120
+        height: 130
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -123,20 +195,20 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 2abe9c4a79a153b60800000000000000
-      internalID: 7725109974431034274
+      spriteID: cdbb642be5ba694f0800000000000000
+      internalID: -822281458742281252
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: 2
+      name: carnivore3_1
       rect:
         serializedVersion: 2
-        x: 191
-        y: 20
-        width: 68
-        height: 136
+        x: 120
+        y: 0
+        width: 120
+        height: 130
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -144,41 +216,20 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: b643d856143e4c2e0800000000000000
-      internalID: -2106308855686417301
+      spriteID: ac931de0a485e2e80800000000000000
+      internalID: -8201520796295677494
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: 3
+      name: carnivore3_2
       rect:
         serializedVersion: 2
-        x: 337
-        y: 20
-        width: 79
-        height: 137
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 1, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: dd1fb41312d17fc70800000000000000
-      internalID: 9004698008348783069
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: 4
-      rect:
-        serializedVersion: 2
-        x: 492
-        y: 21
-        width: 68
-        height: 137
+        x: 240
+        y: 0
+        width: 120
+        height: 130
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -186,20 +237,20 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 1cb3661924b0b18f0800000000000000
-      internalID: -568848547397092415
+      spriteID: 38b0618816af34940800000000000000
+      internalID: 5279338485010271107
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: 5
+      name: carnivore3_3
       rect:
         serializedVersion: 2
-        x: 639
-        y: 20
-        width: 71
-        height: 136
+        x: 360
+        y: 0
+        width: 120
+        height: 130
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -207,20 +258,20 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: cebb039b4df014770800000000000000
-      internalID: 8593166970314079212
+      spriteID: 45375f2e42c0514c0800000000000000
+      internalID: -4317531315198659756
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: 7
+      name: carnivore3_4
       rect:
         serializedVersion: 2
-        x: 792
-        y: 20
-        width: 68
-        height: 136
+        x: 480
+        y: 0
+        width: 120
+        height: 130
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -228,8 +279,29 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: f9ca732e79b404070800000000000000
-      internalID: 8088548046464855199
+      spriteID: 5557e0ed194cbbf20800000000000000
+      internalID: 3439558871202297173
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: carnivore3_5
+      rect:
+        serializedVersion: 2
+        x: 600
+        y: 0
+        width: 120
+        height: 130
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 7bf64a35ca5605c10800000000000000
+      internalID: 2040242422010900407
       vertices: []
       indices: 
       edges: []
