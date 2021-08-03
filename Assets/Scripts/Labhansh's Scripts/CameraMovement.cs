@@ -4,17 +4,17 @@ using UnityEngine;
 
 public class CameraMovement : MonoBehaviour
 {
-    [SerializeField] Transform m_PlayerMovement;
+    [SerializeField] Transform sapling;
 
     void Update()
     {
-        if (m_PlayerMovement != null)
+        if (sapling != null)
         {
-            if (m_PlayerMovement.position.y > -4.8 && m_PlayerMovement.position.y < 7f)
-                this.transform.position = new Vector3(m_PlayerMovement.position.x,
-                           m_PlayerMovement.position.y, this.transform.position.z);
+            if (sapling.position.y > -4.8 && sapling.position.y < 7f)
+                this.transform.position = new Vector3(sapling.position.x,
+                           sapling.position.y, this.transform.position.z);
             else
-                this.transform.position = new Vector3(m_PlayerMovement.position.x,
+                this.transform.position = new Vector3(sapling.position.x,
                                                      this.transform.position.y, this.transform.position.z);
         }
     }
