@@ -25,7 +25,7 @@ namespace CTW.AI
             //_sapling.animator.SetBool("reachedTarget", _sapling.atTreeSpot);
             //_sapling.animator.SetBool("hasTarget", _sapling.nearestTreeSpot != null);
 
-            _sapling.animator.Play("Plant Tree");
+            _sapling.animator.Play("PlantTree");
             Debug.Log("State: PlantTree");
         }
 
