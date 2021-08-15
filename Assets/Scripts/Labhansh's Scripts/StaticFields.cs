@@ -4,7 +4,7 @@ using UnityEngine;
 
 namespace CTW
 {
-    public class StaticFields : MonoBehaviour
+    public struct StaticFields
     {
         public static string SAPLING_TAG = "Sapling";
         public static string SPIKE_TAG = "Spike";
