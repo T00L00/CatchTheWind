@@ -21,7 +21,7 @@ namespace CTW.UI
         public Sapling character;
         public float swipeDampener = 1f;
 
-        private InputSwipeManager inputManager;
+        private PlayerInputManager inputManager;
 
         private Vector3 startPosition;
         private float startTime;
@@ -36,7 +36,7 @@ namespace CTW.UI
 
         private void Awake()
         {
-            inputManager = InputSwipeManager.Instance;
+            inputManager = PlayerInputManager.Instance;
         }
 
         private void Start()
