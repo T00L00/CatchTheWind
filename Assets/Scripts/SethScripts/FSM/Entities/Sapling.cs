@@ -43,7 +43,7 @@ namespace CTW
             health = 5;
 
             rigidBody = GetComponent<Rigidbody2D>();
-            swipeDetector = GameObject.Find("SwipeManager").GetComponent<SwipeDetection>();
+            swipeDetector = GameObject.Find("PlayerInputManager").GetComponent<SwipeDetection>();
             capsuleCollider = GetComponent<CapsuleCollider2D>();
             animator = GetComponent<Animator>();
 

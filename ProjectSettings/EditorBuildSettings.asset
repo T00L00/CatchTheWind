@@ -9,9 +9,9 @@ EditorBuildSettings:
     path: Assets/Scenes/CatchTheWind.unity
     guid: 2cda990e2423bbf4892e6590ba056729
   - enabled: 1
-    path: Assets/Scenes/Menu.unity
-    guid: 57c76d5a60fdf2142a617b76f9bff56d
+    path: Assets/Scenes/Menu_Seth.unity
+    guid: d3da61c1054861249bdf2edf581f8662
   - enabled: 1
-    path: Assets/Scenes/Test Level.unity
-    guid: a1acf39cf61f3b4479cfd0c13688fda2
+    path: Assets/Scenes/Level 1.unity
+    guid: 37c1da7124b165d468fee1ca26a5472f
   m_configObjects: {}
